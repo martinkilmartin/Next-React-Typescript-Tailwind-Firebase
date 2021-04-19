@@ -1,41 +1,100 @@
-# TypeScript Next.js example
+# Next.js React TypeScript Tailwind Firebase starter
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+```yarn dev```
 
-## Deploy your own
+```yarn build```
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+```yarn start```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+```yarn type-check```
 
-## How to use it?
+# Firebase best practices
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-## Notes
-
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
-
-```
-npm install --save-dev typescript
-```
-
-To enable TypeScript's features, we install the type declarations for React and Node.
-
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
-
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
-
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+1. Create **development** and **production** Firebase projects
+2. _Enable_  Google Analytics for your Firebase **production** projects
+   1. Choose analytics location appropriate to primary customer location, e.g. GDPR compliance
+   2. [ ]  Use the default settings for sharing Google Analytics data
+      1. [ ]  Google Products and Services
+      2. [x]   Benchmarking
+      3. [ ]   Technical Support
+      4. [ ]   Account Specialists
+   3. [x] I accept the Google Analytics terms
+3. Assign roles using **Policy Of Least Privilege**
+   1. Roles
+      1. [ ] **Owner** | **Editor** | **Viewer** : Broad access to Google Cloud project resources and services
+      2. [x] Assign Firebase Role(s):
+         1. **Firebase** (All Firebase products except TestLab)
+            1. [ ] Admin (Edit access)
+            2. [x] Viewer (Read-only access)
+         2. **Analytics** (Google Analytics)
+            1. [ ] Admin (Edit access)
+            2. [ ] Viewer (Read-only access)
+         3. **Develop** (Google Analytics, Realtime Database & Cloud Firestore, Authentication, Hosting, Storage, Functions, ML Kit)
+            1. [ ] Admin (Edit access)
+            2. [ ] Viewer (Read-only access)
+         4. **Quality** (Google Analytics, Crashlytics, Performance Monitoring, App Distribution)
+            1. [ ] Admin (Edit access)
+            2. [ ] Viewer (Read-only access)
+         5. **Grow** (Google Analytics, Predictions, A/B Testing, Cloud Messaging, In-App Messaging, Remote Config, Dynamic Links)
+            1. [ ] Admin (Edit access)
+            2. [ ] Viewer (Read-only access)
+4. Add **Data Protection Officer Contact**
+5. Upgrade to Firebase plan to **Blaze**
+6. Set budget alerts
+7. Install **Firebase Command Line Interface (CLI) Tools**  https://firebase.google.com/docs/cli
+8. Install **Google Cloud SDK**  https://cloud.google.com/sdk/docs/install
+9. Use **Firebase App Distribution**  https://firebase.google.com/docs/app-distribution
+10. Initiate Web project
+    1.  ```firebase login```
+    2.  ```firebase init```
+    3.  Enable Firebase CLI features:
+        1.  ◯ Database: Configure Firebase Realtime Database and deploy rules
+        2.  ◉ Firestore: Deploy rules and create indexes for Firestore
+        3.  ◉ Functions: Configure and deploy Cloud Functions
+        4.  ◉ Hosting: Configure and deploy Firebase Hosting sites
+        5.  ◉ Storage: Deploy Cloud Storage security rules
+        6.  ◉ Emulators: Set up local emulators for Firebase features
+        7.  ◉ Remote Config: Get, deploy, and rollback configurations for Remote Config
+    4.  Project Setup
+        1.  [ ] Use an existing project
+        2.  [ ] Create a new project
+        3.  [ ] Add Firebase to an existing Google Cloud Platform project
+        4.  [x] Don't set up a default project
+    5.  Firestore Setup
+        1.  firestore.rules
+        2.  firestore.indexes.json
+    6.  Functions Setup
+        1. ❯ TypeScript
+        2. ESLint? Y
+        3. npm install? n
+    7.  Hosting Setup
+        1. public
+        2. SPA? Y
+        3. GitHub? y
+        4. public/index.html?/ N
+    8.  Emulators Setup
+        1.  ◉ Authentication Emulator
+            1. auth emulator port (9099)
+        2.  ◉ Functions Emulator
+            1. functions emulator port (5001)
+        3.  ◉ Firestore Emulator
+            1. firestore emulator port (8080)
+        4.  ◉ Database Emulator
+            1. database emulator port (9000)
+        5.  ◉ Hosting Emulator
+            1. hosting emulator (5000)
+        6.  ◉ Pub/Sub Emulator
+            1. pubsub emulator (8085)
+        7.  Emulator UI? Y
+        8.  Emulator UI port (any)
+        9.  Download the emulators now? y
+11.  Use deploy scripts
+     1.  ```"emulate-dev": "firebase emulators:start --project <project-name>-dev"```
+     2.  ```"emulate-prod": "firebase emulators:start --project <project-name>-prod"```
+     3.  ```"preview-dev": "firebase hosting:channel:deploy preview --project <project-name>-dev"```
+     4.  ```"preview-prod": "firebase hosting:channel:deploy preview --project <project-name>-prod"```
+     5.  ```"serve-dev": "firebase serve --project <project-name>-dev"```
+     6.  ```"serve-prod": "firebase serve --project <project-name>-prod"```
+     7.  ```"deploy-dev": "firebase deploy --only hosting --project <project-name>-dev"```
+     8.  ```"deploy-prod": "firebase deploy --only hosting --project <project-name>-prod"```
+12. 

@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 import Container from "./Container";
 import MyHead from "./MyHead";
 import Header from "./Header";
+import Footer from "./Footer";
 
 import "tailwindcss/tailwind.css";
 
@@ -21,10 +22,7 @@ const Layout = ({
     <MyHead title={title} description={description} />
     <Header />
     {children}
-    <footer>
-      <hr />
-      <span>I'm here to stay (Footer)</span>
-    </footer>
+    <Footer />
   </Container>
 );
 

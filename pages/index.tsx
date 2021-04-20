@@ -1,16 +1,13 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import 'tailwindcss/tailwind.css'
+import React from "react";
+
+import Layout from "../components/Layout";
+import Main from "../components/Main";
+import "tailwindcss/tailwind.css";
 
 const IndexPage = () => (
   <Layout title="Home">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
+    <Main />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

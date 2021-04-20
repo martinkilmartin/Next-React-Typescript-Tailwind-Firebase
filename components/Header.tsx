@@ -1,19 +1,14 @@
 import React from "react";
 
 import Brand from "./Brand";
-import Navigation from "./Navigation";
-
-const styleClasses = {
-  header: "bg-gray-800",
-  container:
-    "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative flex-shrink-0 flex items-center items-center justify-between h-16",
-};
 
 const Header = () => (
-  <header className={styleClasses.header}>
-    <div className={styleClasses.container}>
+  <header className="bg-gray-800">
+    <a href="#main" className="sr-only focus:not-sr-only">
+      Skip to content
+    </a>
+    <div className="h-16 px-2 pt-2 pb-3 sm:justify-between sm:flex-shrink-0 sm:px-2 sm:mx-auto sm:relative sm:flex sm:items-center sm:max-w-7xl lg:px-8">
       <Brand src="/logo-light.svg" width={60} height={60} />
-      <Navigation />
     </div>
   </header>
 );

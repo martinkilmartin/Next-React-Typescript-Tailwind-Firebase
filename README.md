@@ -1,4 +1,4 @@
-# Next.js React TypeScript Tailwind Firebase starter
+# Next.js React TypeScript Tailwind Firebase Starter
 
 ```yarn dev```
 

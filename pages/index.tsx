@@ -19,7 +19,7 @@ const IndexPage = () => (
       title="Michael Cowell Irish Tours"
       description="I would be happy to contribute to a successful tour of Ireland."
     />
-    <ImageBackground styles="bg-doonagore relative bg-responsive bg-cover bg-no-repeat min-h-3/4">
+    <ImageBackground styles="bg-doonagore relative bg-responsive bg-cover bg-no-repeat min-h-1/2">
       <Header />
       <Main>
         <h1 className="mt-8 font-serif text-2xl font-bold text-center text-white inherit sm:text-5xl sm:mt-24 drop-shadow">
@@ -33,7 +33,7 @@ const IndexPage = () => (
         </div>
       </Main>
     </ImageBackground>
-    <div className="p-2 -mt-16 bg-gray-90">
+    <div className="p-2 -mt-12 sm:-mt-16 sm:flex bg-gray-90">
         <StackedCard
           description="Our tour planning department will happily plan, book, and coordinate
             all tour plans, from airport transfers to coach hire and tour guide
@@ -45,6 +45,40 @@ const IndexPage = () => (
             <Image
               className="w-full"
               src="/img/henrique-craveiro-Cliffs-of-Moher-Co-Clare.webp"
+              alt="Close"
+              width={2400}
+              height={1600}
+            />
+          }
+        />
+        <StackedCard
+          description="Our tour planning department will happily plan, book, and coordinate
+            all tour plans, from airport transfers to coach hire and tour guide
+            booking, hotel bookings, restaurant &amp; attractions, all your
+            requirements in one complete itinerary from your arrival in Ireland
+            until your departure."
+          title="Click below to learn about the tour packages we offer."
+          image={
+            <Image
+              className="w-full"
+              src="/img/michael-Skellig-Michael-Co.Kerry-Also-doubles-as-Luke-Skywalker-retreat-in-Star-Wars.webp"
+              alt="Close"
+              width={2400}
+              height={1600}
+            />
+          }
+        />
+        <StackedCard
+          description="Our tour planning department will happily plan, book, and coordinate
+            all tour plans, from airport transfers to coach hire and tour guide
+            booking, hotel bookings, restaurant &amp; attractions, all your
+            requirements in one complete itinerary from your arrival in Ireland
+            until your departure."
+          title="Click below to learn about the tour packages we offer."
+          image={
+            <Image
+              className="w-full"
+              src="/img/wynand-van-poortvliet-Great-Saltee-Island-Co.Wexford.webp"
               alt="Close"
               width={2400}
               height={1600}

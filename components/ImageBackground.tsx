@@ -1,11 +1,11 @@
 import React, { ReactNode } from "react";
 
 type Props = {
-  styles?: string;
+  styles: string;
   children?: ReactNode;
 };
 
-const ImageBackground = ({ children, styles = "-z-1" }: Props) => (
+const ImageBackground = ({ children, styles }: Props) => (
   <div className={styles}>{children}</div>
 );
 

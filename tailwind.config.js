@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         doonagore:
-          "url('/img/jesse-gardner-Doonagore-Castle-fort-of-the-goats-Doolin-Co-Clare-Ireland.jpg')",
+          "url('/img/jesse-gardner-Doonagore-Castle-fort-of-the-goats-Doolin-Co-Clare-Ireland.webp')",
       }),
       zIndex: {
         "-1": "-1",
@@ -21,6 +21,14 @@ module.exports = {
         "-8": "-8",
         "-9": "-9",
         "-10": "-10",
+      },
+      minHeight: {
+        0: "0",
+        "1/4": "25vh",
+        "1/2": "50vh",
+        "3/4": "75vh",
+        "9/10": "90vh",
+        full: "100%",
       },
     },
   },

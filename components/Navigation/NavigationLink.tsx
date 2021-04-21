@@ -13,15 +13,10 @@ function NavigationLink({
   ariaCurrent = false,
   text
 }: Props) {
-  const styleClasses = {
-    active: "text-gray-300 hover:bg-gray-700 hover:text-white block sm:inline px-3 py-2 rounded-md text-base font-medium",
-    inActive:
-      "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium",
-  };
   return (
     <Link href={href}>
       <a
-        className={ariaCurrent ? styleClasses.inActive : styleClasses.active}
+        className={ariaCurrent ? "block px-4 py-2 mt-4 mr-4 font-bold text-white text-teal-200 bg-transparent sm:bg-green-900 sm:rounded sm:inline-block sm:mt-0 sm:hover:text-white hover:bg-green-700" : "block px-4 py-2 mt-4 mr-4 font-bold text-white text-teal-200 bg-transparent sm:bg-green-500 sm:rounded sm:inline-block sm:mt-0 sm:hover:text-white hover:bg-green-700"}
         aria-current={ariaCurrent}
       >
         {text}

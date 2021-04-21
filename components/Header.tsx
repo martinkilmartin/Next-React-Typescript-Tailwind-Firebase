@@ -1,6 +1,6 @@
 import React from "react";
 
-import Brand from "./Brand";
+import ResponsiveHeaderNavigation from "./Navigation/ResponsiveHeaderNavigation";
 
 type Props = {
   styles?: string;
@@ -14,12 +14,7 @@ const Header = ({
       Skip to content
     </a>
     <div className={styles}>
-      <Brand
-        alt="MCT Irish Tours logo"
-        src="/MCT-Irish-Tours-Logo.png"
-        width={400}
-        height={80}
-      />
+      <ResponsiveHeaderNavigation />
     </div>
   </header>
 );

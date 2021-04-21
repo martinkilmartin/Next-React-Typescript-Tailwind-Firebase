@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import MenuButton from "../Buttons/MenuButton";
+import MenuButton from "../ui/Buttons/MenuButton";
 import NavigationLinks from "./NavigationLinks";
 
 function Navigation() {

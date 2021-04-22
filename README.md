@@ -89,12 +89,14 @@
        8. Emulator UI port (any)
        9. Download the emulators now? y
 11. Use deploy scripts
-    1. `"emulate-dev": "firebase emulators:start --project <project-name>-dev"`
-    2. `"emulate-prod": "firebase emulators:start --project <project-name>-prod"`
-    3. `"preview-dev": "firebase hosting:channel:deploy preview --project <project-name>-dev"`
-    4. `"preview-prod": "firebase hosting:channel:deploy preview --project <project-name>-prod"`
-    5. `"serve-dev": "firebase serve --project <project-name>-dev"`
-    6. `"serve-prod": "firebase serve --project <project-name>-prod"`
-    7. `"deploy-dev": "firebase deploy --only hosting --project <project-name>-dev"`
-    8. `"deploy-prod": "firebase deploy --only hosting --project <project-name>-prod"`
-12.
+    1. `"emulate-dev": "firebase emulators:start --project <your-project-name>-dev"`
+    2. `"emulate-prod": "firebase emulators:start --project <your-project-name>-prod"`
+    3. `"preview-dev": "firebase hosting:channel:deploy preview --project <your-project-name>-dev"`
+    4. `"preview-prod": "firebase hosting:channel:deploy preview --project <your-project-name>-prod"`
+    5. `"serve-dev": "firebase serve --project <your-project-name>-dev"`
+    6. `"serve-prod": "firebase serve --project <your-project-name>-prod"`
+    7. `"deploy-dev": "firebase deploy --only hosting --project <your-project-name>-dev"`
+    8. `"deploy-prod": "firebase deploy --only hosting --project <your-project-name>-prod"`
+12. Default domains:
+    1. `<your-project-name>.[dev|prod].web.app`
+    2. `<your-project-name>.[dev|prod].firebaseapp.com`

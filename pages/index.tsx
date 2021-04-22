@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react'
 
-import Image from "next/image";
+import Image from 'next/image'
 
-import Layout from "../components/Layout";
-import MyHead from "../components/MyHead";
-import Header from "../components/Header";
-import Main from "../components/Main";
-import SimpleButton from "../components/ui/Buttons/SimpleButton";
+import Layout from '../components/Layout'
+import MyHead from '../components/MyHead'
+import Header from '../components/Header'
+import Main from '../components/Main'
+import SimpleButton from '../components/ui/Buttons/SimpleButton'
 
-import StackedCard from "../components/ui/Cards/StackedCard";
+import StackedCard from '../components/ui/Cards/StackedCard'
 
-import ImageBackground from "../components/ImageBackground";
-import "tailwindcss/tailwind.css";
+import ImageBackground from '../components/ImageBackground'
+import 'tailwindcss/tailwind.css'
 
 const IndexPage = () => (
   <Layout>
@@ -34,59 +34,59 @@ const IndexPage = () => (
       </Main>
     </ImageBackground>
     <div className="flex flex-col p-2 -mt-12 content-evenly sm:-mt-16 sm:flex-row bg-gray-90">
-        <StackedCard
-          description="Our tour planning department will happily plan, book, and coordinate
+      <StackedCard
+        description="Our tour planning department will happily plan, book, and coordinate
             all tour plans, from airport transfers to coach hire and tour guide
             booking, hotel bookings, restaurant &amp; attractions, all your
             requirements in one complete itinerary from your arrival in Ireland
             until your departure."
-          title="Click below to learn about the tour packages we offer."
-          image={
-            <Image
-              className="w-full"
-              src="/img/henrique-craveiro-Cliffs-of-Moher-Co-Clare.webp"
-              alt="Close"
-              width={2400}
-              height={1600}
-            />
-          }
-        />
-        <StackedCard
-          description="Our tour planning department will happily plan, book, and coordinate
+        title="Click below to learn about the tour packages we offer."
+        image={
+          <Image
+            className="w-full"
+            src="/img/henrique-craveiro-Cliffs-of-Moher-Co-Clare.webp"
+            alt="Close"
+            width={2400}
+            height={1600}
+          />
+        }
+      />
+      <StackedCard
+        description="Our tour planning department will happily plan, book, and coordinate
             all tour plans, from airport transfers to coach hire and tour guide
             booking, hotel bookings, restaurant &amp; attractions, all your
             requirements in one complete itinerary from your arrival in Ireland
             until your departure."
-          title="Click below to learn about the tour packages we offer."
-          image={
-            <Image
-              className="w-full"
-              src="/img/michael-Skellig-Michael-Co.Kerry-Also-doubles-as-Luke-Skywalker-retreat-in-Star-Wars.webp"
-              alt="Close"
-              width={2400}
-              height={1600}
-            />
-          }
-        />
-        <StackedCard
-          description="Our tour planning department will happily plan, book, and coordinate
+        title="Click below to learn about the tour packages we offer."
+        image={
+          <Image
+            className="w-full"
+            src="/img/michael-Skellig-Michael-Co.Kerry-Also-doubles-as-Luke-Skywalker-retreat-in-Star-Wars.webp"
+            alt="Close"
+            width={2400}
+            height={1600}
+          />
+        }
+      />
+      <StackedCard
+        description="Our tour planning department will happily plan, book, and coordinate
             all tour plans, from airport transfers to coach hire and tour guide
             booking, hotel bookings, restaurant &amp; attractions, all your
             requirements in one complete itinerary from your arrival in Ireland
             until your departure."
-          title="Click below to learn about the tour packages we offer."
-          image={
-            <Image
-              className="w-full"
-              src="/img/wynand-van-poortvliet-Great-Saltee-Island-Co.Wexford.webp"
-              alt="Close"
-              width={2400}
-              height={1600}
-            />
-          }
-        />
-      </div>
+        title="Click below to learn about the tour packages we offer."
+        image={
+          <Image
+            className="w-full"
+            src="/img/wynand-van-poortvliet-Great-Saltee-Island-Co.Wexford.webp"
+            alt="Close"
+            width={2400}
+            height={1600}
+          />
+        }
+      />
+    </div>
   </Layout>
-);
+)
 
-export default IndexPage;
+export default IndexPage

@@ -1,6 +1,6 @@
 type Props = {
-  label: string;
-};
+  label: string
+}
 
 const SimpleButton = ({ label }: Props) => (
   <button
@@ -9,6 +9,6 @@ const SimpleButton = ({ label }: Props) => (
   >
     <b>{label}</b>
   </button>
-);
+)
 
-export default SimpleButton;
+export default SimpleButton

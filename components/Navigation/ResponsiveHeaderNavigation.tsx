@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import Brand from "../Brand";
-import NavigationLink from "./NavigationLink";
+import React, { useState } from 'react'
+import Image from 'next/image'
+import Brand from '../Brand'
+import NavigationLink from './NavigationLink'
 
 function ResponsiveHeaderNavigation() {
-  const MOBILE_MENU_ID = "mobile-menu";
-  const [open, setOpen] = useState(false);
+  const MOBILE_MENU_ID = 'mobile-menu'
+  const [open, setOpen] = useState(false)
 
   return (
     <nav className="flex flex-wrap items-center justify-between p-6">
@@ -36,28 +36,27 @@ function ResponsiveHeaderNavigation() {
         </button>
       </div>
       <div
-          className={open ? "z-10 flex-grow block w-full sm:flex sm:items-center sm:w-auto" : "z-10 flex-grow hidden w-full sm:flex sm:items-center sm:w-auto"}
-          onBlur={() => setOpen(!open)}
+        className={
+          open
+            ? 'z-10 flex-grow block w-full sm:flex sm:items-center sm:w-auto'
+            : 'z-10 flex-grow hidden w-full sm:flex sm:items-center sm:w-auto'
+        }
+        onBlur={() => setOpen(!open)}
+      >
+        <div
+          className="text-sm bg-green-500 sm:flex-grow sm:bg-transparent"
+          id={MOBILE_MENU_ID}
         >
-          <div className="text-sm bg-green-500 sm:flex-grow sm:bg-transparent" id={MOBILE_MENU_ID}>
-            <NavigationLink href="/" ariaCurrent="page" text="Home" />
-            <NavigationLink href="/tours" ariaCurrent={false} text="Tours" />
-            <NavigationLink href="/about" ariaCurrent={false} text="About" />
-            <NavigationLink
-              href="/gallery"
-              ariaCurrent={false}
-              text="Gallery"
-            />
-            <NavigationLink href="/blog" ariaCurrent={false} text="Blog" />
-            <NavigationLink
-              href="/contact"
-              ariaCurrent={false}
-              text="Contact"
-            />
-          </div>
+          <NavigationLink href="/" ariaCurrent="page" text="Home" />
+          <NavigationLink href="/tours" ariaCurrent={false} text="Tours" />
+          <NavigationLink href="/about" ariaCurrent={false} text="About" />
+          <NavigationLink href="/gallery" ariaCurrent={false} text="Gallery" />
+          <NavigationLink href="/blog" ariaCurrent={false} text="Blog" />
+          <NavigationLink href="/contact" ariaCurrent={false} text="Contact" />
         </div>
+      </div>
     </nav>
-  );
+  )
 }
 
-export default ResponsiveHeaderNavigation;
+export default ResponsiveHeaderNavigation

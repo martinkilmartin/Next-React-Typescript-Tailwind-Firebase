@@ -48,7 +48,7 @@ const Shamrock = () => {
       <g></g>
       <g></g>
     </svg>
-  );
-};
+  )
+}
 
-export default Shamrock;
+export default Shamrock

@@ -1,12 +1,12 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode } from 'react'
 
 type Props = {
-  children?: ReactNode;
-  style?: string;
-};
+  children?: ReactNode
+  style?: string
+}
 
-const Container = ({ children, style = "container px-2 sm:px-4" }: Props) => (
+const Container = ({ children, style = 'container px-2 sm:px-4' }: Props) => (
   <div className={style}>{children}</div>
-);
+)
 
-export default Container;
+export default Container

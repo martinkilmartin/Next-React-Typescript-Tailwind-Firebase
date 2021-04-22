@@ -22,11 +22,7 @@ const StaticPropsDetail = ({ item, errors }: Props) => {
     )
   }
 
-  return (
-    <Layout>
-      {item && <ListDetail item={item} />}
-    </Layout>
-  )
+  return <Layout>{item && <ListDetail item={item} />}</Layout>
 }
 
 export default StaticPropsDetail

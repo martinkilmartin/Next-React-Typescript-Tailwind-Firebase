@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import MenuButton from "../ui/Buttons/MenuButton";
-import NavigationLinks from "./NavigationLinks";
+import MenuButton from '../ui/Buttons/MenuButton'
+import NavigationLinks from './NavigationLinks'
 
 function Navigation() {
-  const MOBILE_MENU_ID = "mobile-menu";
-  const [open, setOpen] = useState(false);
+  const MOBILE_MENU_ID = 'mobile-menu'
+  const [open, setOpen] = useState(false)
 
   return (
     <nav className="bg-gray-800">
@@ -20,10 +20,10 @@ function Navigation() {
             ariaControl={MOBILE_MENU_ID}
           />
         </div>
-        {!open ? <NavigationLinks /> : ""}
+        {!open ? <NavigationLinks /> : ''}
       </div>
     </nav>
-  );
+  )
 }
 
-export default Navigation;
+export default Navigation

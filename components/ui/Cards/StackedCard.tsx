@@ -1,13 +1,13 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
-import SimpleHashTag from "../Tags/SimpleHashTag";
+import SimpleHashTag from '../Tags/SimpleHashTag'
 
 type Props = {
-  image: ReactNode;
-  title: string;
-  description: string;
-  tags?: [string];
-};
+  image: ReactNode
+  title: string
+  description: string
+  tags?: [string]
+}
 
 const StackedCard = ({ image, title, description, tags }: Props) => (
   <div className="max-w-sm ml-4 mr-4 overflow-hidden rounded shadow-lg">
@@ -19,13 +19,13 @@ const StackedCard = ({ image, title, description, tags }: Props) => (
     {tags?.length ? (
       <div className="px-6 pt-4 pb-2">
         {tags.map((tag) => {
-          <SimpleHashTag tag={tag} />;
+          ;<SimpleHashTag tag={tag} />
         })}
       </div>
     ) : (
-      ""
+      ''
     )}
   </div>
-);
+)
 
-export default StackedCard;
+export default StackedCard

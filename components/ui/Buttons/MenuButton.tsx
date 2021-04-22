@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 type Props = {
-  ariaControl: string;
-  open: boolean;
-  setOpen: (o: boolean) => void;
-};
+  ariaControl: string
+  open: boolean
+  setOpen: (o: boolean) => void
+}
 
 const MenuButton = ({ ariaControl, open = false, setOpen }: Props) => (
   <button
@@ -21,6 +21,6 @@ const MenuButton = ({ ariaControl, open = false, setOpen }: Props) => (
       <Image src="/menu-open.svg" alt="Open" width={24} height={24} />
     )}
   </button>
-);
+)
 
-export default MenuButton;
+export default MenuButton

@@ -7,6 +7,7 @@ import MyHead from '../components/MyHead'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import SimpleButton from '../components/ui/Buttons/SimpleButton'
+import Picture from '../components/ui/Images/Picture'
 
 import StackedCard from '../components/ui/Cards/StackedCard'
 
@@ -19,7 +20,7 @@ const IndexPage = () => (
       title="Michael Cowell Irish Tours"
       description="I would be happy to contribute to a successful tour of Ireland."
     />
-    <ImageBackground backgroundImage="bg-doonagore">
+    <ImageBackground backgroundImage="bg-doonagoreXXL">
       <Header />
       <Main>
         <h1 className="mt-8 font-serif text-2xl font-bold text-center text-white inherit sm:text-5xl sm:mt-24 drop-shadow">
@@ -44,7 +45,7 @@ const IndexPage = () => (
         image={
           <Image
             className="w-full"
-            src="/img/henrique-craveiro-Cliffs-of-Moher-Co-Clare.webp"
+            src="/img/xxl/xxl-henrique-craveiro-cliffs-of-moher-co-clare-ireland.webp"
             alt="Close"
             width={2400}
             height={1600}
@@ -61,7 +62,7 @@ const IndexPage = () => (
         image={
           <Image
             className="w-full"
-            src="/img/michael-Skellig-Michael-Co.Kerry-Also-doubles-as-Luke-Skywalker-retreat-in-Star-Wars.webp"
+            src="/img/xxl/xxl-michael-skellig-michael-co-kerry-also-doubles-as-luke-skywalker-retreat-in-star-wars-ireland.webp"
             alt="Close"
             width={2400}
             height={1600}
@@ -78,7 +79,7 @@ const IndexPage = () => (
         image={
           <Image
             className="w-full"
-            src="/img/wynand-van-poortvliet-Great-Saltee-Island-Co.Wexford.webp"
+            src="/img/xxl/xxl-wynand-van-poortvliet-great-saltee-island-wexford-ireland.webp"
             alt="Close"
             width={2400}
             height={1600}

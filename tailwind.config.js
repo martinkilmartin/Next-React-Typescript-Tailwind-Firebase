@@ -7,8 +7,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
-        doonagore:
-          "url('/img/jesse-gardner-Doonagore-Castle-fort-of-the-goats-Doolin-Co-Clare-Ireland.webp')",
+        doonagoreXXL:
+          "url('/img/xxl/xxl-jesse-gardner-doonagore-castle-fort-of-the-goats-doolin-co-clare-ireland.webp')",
       }),
       zIndex: {
         '-1': '-1',

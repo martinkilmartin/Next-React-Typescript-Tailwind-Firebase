@@ -19,5 +19,10 @@
     "target": "esnext"
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "scripts/constants/imageSizes.mjs",
+    "scripts/constants/imagePaths.mjs"
+  ]
 }

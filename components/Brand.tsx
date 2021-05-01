@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 type Props = {
   src: string
@@ -10,7 +9,7 @@ type Props = {
 }
 
 const Brand = ({ src, alt, width, height, styles }: Props) => (
-  <Image src={src} alt={alt} width={width} height={height} className={styles} />
+  <img src={src} alt={alt} width={width} height={height} className={styles} />
 )
 
 export default Brand

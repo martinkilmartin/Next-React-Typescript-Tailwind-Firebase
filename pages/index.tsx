@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Image from 'next/image'
-
 import Layout from '../components/Layout'
 import MyHead from '../components/MyHead'
 import Header from '../components/Header'
@@ -20,13 +18,13 @@ const IndexPage = () => (
       title="Michael Cowell Irish Tours"
       description="I would be happy to contribute to a successful tour of Ireland."
     />
-    <ImageBackground backgroundImage="bg-doonagoreXXL">
+    <ImageBackground backgroundImage="doonagoreXS sm:doonagoreSM md:doonagoreMD lg:doonagoreLG xl:doonagoreXL 2xl:bg-doonagoreXXL">
       <Header />
       <Main>
-        <h1 className="mt-8 font-serif text-2xl font-bold text-center text-white inherit sm:text-5xl sm:mt-24 drop-shadow">
+        <h1 className="mt-8 font-serif text-2xl font-bold text-center text-white bg-green-600 opacity-80 sm:text-5xl sm:mt-24 drop-shadow">
           Michael Cowell Irish Tours
         </h1>
-        <h2 className="mt-8 font-serif font-bold text-center text-white sm:bg-opacity-0 text-1xl inherit sm:text-3xl drop-shadow">
+        <h2 className="mt-8 font-serif font-bold text-center text-white bg-yellow-600 sm:bg-opacity-0 text-1xl sm:text-3xl drop-shadow">
           Individually tailored and specialized tours
         </h2>
         <div className="mt-8 text-center">
@@ -43,10 +41,9 @@ const IndexPage = () => (
             until your departure."
         title="Click below to learn about the tour packages we offer."
         image={
-          <Image
-            className="w-full"
-            src="/img/xxl/xxl-henrique-craveiro-cliffs-of-moher-co-clare-ireland.webp"
-            alt="Close"
+          <Picture
+            src="henrique-craveiro-cliffs-of-moher-co-clare-ireland"
+            alt="henrique-craveiro-cliffs-of-moher-co-clare-ireland"
             width={2400}
             height={1600}
           />
@@ -60,10 +57,9 @@ const IndexPage = () => (
             until your departure."
         title="Click below to learn about the tour packages we offer."
         image={
-          <Image
-            className="w-full"
-            src="/img/xxl/xxl-michael-skellig-michael-co-kerry-also-doubles-as-luke-skywalker-retreat-in-star-wars-ireland.webp"
-            alt="Close"
+          <Picture
+            src="michael-skellig-michael-co-kerry-also-doubles-as-luke-skywalker-retreat-in-star-wars-ireland"
+            alt="michael-skellig-michael-co-kerry-also-doubles-as-luke-skywalker-retreat-in-star-wars-ireland"
             width={2400}
             height={1600}
           />
@@ -77,10 +73,9 @@ const IndexPage = () => (
             until your departure."
         title="Click below to learn about the tour packages we offer."
         image={
-          <Image
-            className="w-full"
-            src="/img/xxl/xxl-wynand-van-poortvliet-great-saltee-island-wexford-ireland.webp"
-            alt="Close"
+          <Picture
+            src="wynand-van-poortvliet-great-saltee-island-wexford-ireland"
+            alt="wynand-van-poortvliet-great-saltee-island-wexford-ireland"
             width={2400}
             height={1600}
           />

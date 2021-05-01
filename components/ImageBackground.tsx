@@ -9,7 +9,7 @@ const ImageBackground = ({ children, backgroundImage }: Props) => (
   <div
     className={
       backgroundImage +
-      ' backdrop-opacity-0 relative bg-responsive bg-cover bg-no-repeat min-h-1/2'
+      ' backdrop-opacity-0 relative bg-responsive bg-cover bg-no-repeat min-h-3/5'
     }
   >
     {children}

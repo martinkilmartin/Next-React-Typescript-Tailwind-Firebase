@@ -8,7 +8,19 @@ module.exports = {
     extend: {
       backgroundImage: (theme) => ({
         doonagoreXXL:
-          "url('/img/xxl/xxl-jesse-gardner-doonagore-castle-fort-of-the-goats-doolin-co-clare-ireland.webp')",
+          "url('/img/xxl/jordan-harrison-dame-lane-dublin-ireland-2400w.jpg')",
+        doonagoreXL:
+          "url('/img/xl/jordan-harrison-dame-lane-dublin-ireland-1920w.jpg')",
+        doonagoreLG:
+          "url('/img/lg/jordan-harrison-dame-lane-dublin-ireland-1560w.jpg')",
+        doonagoreMD:
+          "url('/img/md/jordan-harrison-dame-lane-dublin-ireland-1240w.jpg')",
+        doonagoreSM:
+          "url('/img/sm/jordan-harrison-dame-lane-dublin-ireland-800w.jpg')",
+        doonagoreXS:
+          "url('/img/xs/jordan-harrison-dame-lane-dublin-ireland-500w.jpg')",
+        doonagoreXXS:
+          "url('/img/xxs/jordan-harrison-dame-lane-dublin-ireland-300w.jpg')",
       }),
       zIndex: {
         '-1': '-1',
@@ -25,7 +37,9 @@ module.exports = {
       minHeight: {
         0: '0',
         '1/4': '25vh',
+        '2/5': '40vh',
         '1/2': '50vh',
+        '3/5': '60vh',
         '3/4': '75vh',
         '9/10': '90vh',
         full: '100%',

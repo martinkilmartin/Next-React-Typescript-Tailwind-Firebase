@@ -8,6 +8,8 @@
 
 `yarn type-check`
 
+`yarn imagemin`
+
 # Firebase best practices
 
 1. Create **development** and **production** Firebase projects

@@ -23,7 +23,7 @@ function ResponsiveHeaderNavigation() {
       <div className="block sm:hidden">
         <button
           className="flex items-center px-3 py-2 text-teal-200 border border-teal-400 rounded hover:text-white hover:border-white"
-          aria-control={MOBILE_MENU_ID}
+          aria-controls={MOBILE_MENU_ID}
           aria-expanded="false"
           onClick={() => setOpen(!open)}
         >

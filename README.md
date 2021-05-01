@@ -18,7 +18,7 @@ Destinations:
 
 `yarn build-export`
 
-Creates an optimized production build. Uses Static Site Generation and exports an `/out/` directory for deployment as a static website.
+Creates an optimized production build. Uses [Static Site Generation](https://nextjs.org/docs/advanced-features/static-html-export) and exports an `/out/` directory for deployment as a static website.
 
 `yarn deploy`
 

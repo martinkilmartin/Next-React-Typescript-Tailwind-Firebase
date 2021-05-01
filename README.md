@@ -1,5 +1,24 @@
 # Next.js React TypeScript Tailwind Firebase Starter
 
+`yarn imagemin`
+Creates optimized [MozJPEG](https://github.com/mozilla/mozjpeg) and [WebP](https://developers.google.com/speed/webp) images.
+Source directory: `/public/img/originals/*`
+Destinations:
+
+1. `/public/img/xxl/...-2400w.jpg|webp`
+2. `/public/img/xl/...-1920w.jpg|webp`
+3. `/public/img/lg/...-1560w.jpg|webp`
+4. `/public/img/md/...-1280w.jpg|webp`
+5. `/public/img/sm/...-800w.jpg|webp`
+6. `/public/img/xs/...-500w.jpg|webp`
+7. `/public/img/xxs/...-300w.jpg|webp`
+
+`yarn build-export`
+Creates an optimized production build. Uses Static Site Generation and exports an `/out/` directory for deployment to Firebase as a static website.
+
+`yarn deploy`
+Deploys to firebase hosting.
+
 `yarn dev`
 
 `yarn build`
@@ -8,9 +27,7 @@
 
 `yarn type-check`
 
-`yarn imagemin`
-
-# Firebase best practices
+# [Firebase best practices](https://www.youtube.com/watch?v=iWEgpdVSZyg)
 
 1. Create **development** and **production** Firebase projects
 2. _Enable_ Google Analytics for your Firebase **production** projects

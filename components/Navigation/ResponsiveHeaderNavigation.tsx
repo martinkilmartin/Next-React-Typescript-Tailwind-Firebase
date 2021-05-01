@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Image from 'next/image'
 import Brand from '../Brand'
 import NavigationLink from './NavigationLink'
 
@@ -29,9 +28,9 @@ function ResponsiveHeaderNavigation() {
         >
           <span className="sr-only">Open main menu</span>
           {!open ? (
-            <Image src="/menu-open.svg" alt="Open" width={24} height={24} />
+            <img src="/menu-open.svg" alt="Open" width={24} height={24} />
           ) : (
-            <Image src="/menu-close.svg" alt="Close" width={24} height={24} />
+            <img src="/menu-close.svg" alt="Close" width={24} height={24} />
           )}
         </button>
       </div>

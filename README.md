@@ -1,8 +1,11 @@
 # Next.js React TypeScript Tailwind Firebase Starter
 
 `yarn imagemin`
+
 Creates optimized [MozJPEG](https://github.com/mozilla/mozjpeg) and [WebP](https://developers.google.com/speed/webp) images.
+
 Source directory: `/public/img/originals/*`
+
 Destinations:
 
 1. `/public/img/xxl/...-2400w.jpg|webp`
@@ -14,9 +17,11 @@ Destinations:
 7. `/public/img/xxs/...-300w.jpg|webp`
 
 `yarn build-export`
-Creates an optimized production build. Uses Static Site Generation and exports an `/out/` directory for deployment to Firebase as a static website.
+
+Creates an optimized production build. Uses [Static Site Generation](https://nextjs.org/docs/advanced-features/static-html-export) and exports an `/out/` directory for deployment as a static website.
 
 `yarn deploy`
+
 Deploys to firebase hosting.
 
 `yarn dev`

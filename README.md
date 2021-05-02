@@ -27,7 +27,9 @@ Deploys to firebase hosting.
 
 `yarn type-check`
 
-# [Firebase best practices](https://www.youtube.com/watch?v=iWEgpdVSZyg)
+# Firebase best practices
+
+Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
 
 1. Create **development** and **production** Firebase projects
 2. _Enable_ Google Analytics for your Firebase **production** projects
@@ -119,3 +121,87 @@ Deploys to firebase hosting.
 12. Default domains:
     1. `<your-project-name>.[dev|prod].web.app`
     2. `<your-project-name>.[dev|prod].firebaseapp.com`
+13. Multi-Site hosting:
+
+```
+   "hosting": [
+      {
+         "target": "admin",
+         "public": "dist"
+      },
+      {
+         "public": "out",
+         "ignore": [
+            "firebase.json", "**/.*", "**/node_modules/**"
+         ]
+      }
+   ]
+```
+
+14. URL rewrites:
+
+```
+   "rewrites": [
+      {
+         "source": "/path",
+         "function": "cloud-function-name"
+      },
+      {
+         "source": "**",
+         "destination": "/index.html"
+      }
+   ]
+```
+
+15. Dynamic Links (into Android / iOS app)
+
+```
+  "rewrites": [
+     {
+        "source": "app-link",
+        "dynamicLinks": true
+     }
+  ]
+```
+
+16. Set HTTP Headers
+
+```
+   "hosting": [
+      ...
+      "headers": [
+         {
+            "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)",
+            "headers": [
+               {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+               }
+            ]
+         },
+         {
+            "source": "**/*.@(jpg|jpeg|gif|png|webp)",
+            "headers": [
+               {
+                  "key": "Cache-Control",
+                  "value": "max-age=2629000"
+               }
+            ]
+         },
+         {
+            "source": "**/*.@(js|css|woff2)",
+            "headers": [
+               {
+                  "key": "Cache-Control",
+                  "value": "max-age=31536000"
+               }
+            ]
+         }
+      ]
+   ]
+```
+
+17. CI/CD with Google cloud build
+    1.  First 120 build-minutes per day : **Free**
+    2.  Additional build-minutes : **$0.003 per minute**
+18. ...

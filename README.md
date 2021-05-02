@@ -144,12 +144,14 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
 ```
 
 14. URL rewrites:
+    1. [SSR](https://nextjs.org/docs/basic-features/pages#server-side-rendering)
+    2. [SSG](https://nextjs.org/docs/basic-features/pages#static-generation-recommended)
 
 ```
    "rewrites": [
       {
          "source": "/path",
-         "function": "cloud-function-name"
+         "function": "SSR-cloud-function-name"
       },
       {
          "source": "**",
@@ -158,7 +160,7 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
    ]
 ```
 
-15. Dynamic Links (into Android / iOS app)
+1.  Dynamic Links (into Android / iOS app)
 
 ```
   "rewrites": [
@@ -206,7 +208,7 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
    ]
 ```
 
-17. CI/CD with Google cloud build
+17. CI/CD with [Google cloud build](https://cloud.google.com/build)
     1.  First 120 build-minutes per day : **Free**
     2.  Additional build-minutes : **$0.003 per minute**
 18. ...

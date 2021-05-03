@@ -191,8 +191,6 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
 16. Set HTTP Headers
 
 ```json
-   "hosting": [
-      ...
       "headers": [
          {
             "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)",
@@ -222,7 +220,6 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
             ]
          }
       ]
-   ]
 ```
 
 17. CI/CD with [Google cloud build](https://cloud.google.com/build)
@@ -234,10 +231,11 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
     | Cloud Firestore [x] | Firebase Realtime Database |
     | -------------------- | -------------------------- |
     | $0.18 / GB stored | $5.00 / GB stored |
-    | $0.18 / 100k writes | $1.00 / GB downloaded |
-    | $0.06 / 100k reads | |
+    | $0.18 / 100k writes | |
+    | $0.06 / 100k reads | $1.00 / GB downloaded |
     | $0.02 / 100k deletes | |
 19. [Backup data](https://cloud.google.com/sdk/gcloud/reference/beta/firestore/export)
+    1.  Coldline
 20. `$ gcloud beta firestore export gs://[BUCKET_NAME]`
 21. Secure Database
 22. Start in **production mode**:
@@ -377,4 +375,94 @@ const end = start + '~'
 movies.orderBy('title').startAt(start).endAt(end)
 ```
 
-37. ...
+37. Use server timestamp
+
+```javascript
+const { serverTimestamp } = firebase.firestore.FieldValue
+ref.update({ timestamp: serverTimestamp() })
+```
+
+38. Increment value
+
+```javascript
+const { increment } = firebase.firestore.FieldValue
+ref.update({ counter: increment(1 | -1) })
+```
+
+39. Atomic batch writes
+
+```javascript
+const batch = db.batch()
+batch.set(game, { score })
+batch.set(user, { lifetimeScore })
+batch.commit()
+```
+
+40. [Security rules](https://firebase.google.com/docs/firestore/security/rules-conditions)
+
+```javascript
+   service cloud.firestore {
+      match /database/{database}/documents {
+         match /{document=**} {
+            allow read, write: if false;
+         }
+         // Allow the user to access documents in the "cities" collection
+         // only if they are authenticated.
+         match /cities/{city} {
+            allow read, write: if request.auth != null;
+         }
+         // Make sure the uid of the requesting user matches name of the user
+         // document. The wildcard expression {userId} makes the userId variable
+         // available in rules.
+         match /users/{userId} {
+            allow read, update, delete: if request.auth != null && request.auth.uid == userId;
+            allow create: if request.auth != null;
+         }
+         // Allow the user to read data if the document has the 'visibility'
+         // field set to 'public'
+         match /cities/{city} {
+            allow read: if resource.data.visibility == 'public';
+         }
+         // Make sure all cities have a positive population and
+         // the name is not changed
+         match /cities/{city} {
+            allow update: if request.resource.data.population > 0
+                        && request.resource.data.name == resource.data.name;
+         }
+         match /cities/{city} {
+            // Make sure a 'users' document exists for the requesting user before
+            // allowing any writes to the 'cities' collection
+            allow create: if request.auth != null && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+
+            // Allow the user to delete cities if their user document has the
+            // 'admin' field set to 'true'
+            allow delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true
+         }
+         // Custom functions
+         // True if the user is signed in or the requested data is 'public'
+         function signedInOrPublic() {
+            return request.auth.uid != null || resource.data.visibility == 'public';
+         }
+         match /cities/{city} {
+            allow read, write: if signedInOrPublic();
+         }
+         match /users/{user} {
+            allow read, write: if signedInOrPublic();
+         }
+         // Various
+         function isAdmin() {
+            return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin;
+         }
+         match /myDoc/{myDocId} {
+            allow get: if [resource.[data|__name__|id]]|[request.[auth|path|resource|time|method]];
+            allow list: if request.auth != null && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+            allow create: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.admin == true
+            allow update: if request.auth != null && if isAdmin()
+            allow delete: if request.auth != null && if isAdmin()
+         }
+      }
+   }
+```
+
+41. File Storage
+    ...

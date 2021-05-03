@@ -163,8 +163,8 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
 ```
 
 14. URL rewrites:
-1.  [SSR](https://nextjs.org/docs/basic-features/pages#server-side-rendering)
-1.  [SSG](https://nextjs.org/docs/basic-features/pages#static-generation-recommended)
+    1.  [SSR](https://nextjs.org/docs/basic-features/pages#server-side-rendering)
+    2.  [SSG](https://nextjs.org/docs/basic-features/pages#static-generation-recommended)
     ```json
        "rewrites": [
           {
@@ -177,7 +177,7 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
           }
        ]
     ```
-1.  Dynamic Links (into Android / iOS app)
+15. Dynamic Links (into Android / iOS app)
 
 ```json
 "rewrites": [
@@ -236,34 +236,34 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
     | $0.02 / 100k deletes | |
 19. [Backup data](https://cloud.google.com/sdk/gcloud/reference/beta/firestore/export)
     1.  Coldline
-20. `$ gcloud beta firestore export gs://[BUCKET_NAME]`
-21. Secure Database
-22. Start in **production mode**:
+    2.  `$ gcloud beta firestore export gs://[BUCKET_NAME]`
+20. Secure Database
+21. Start in **production mode**:
     1.  Your data is private by default.
     2.  Client read/write access will only be granted as specified by your security rules.
-23. Database location
-24. Near clients
-25. Ease GDPR compliance
-26. JS import only required firebase dependencies
+22. Database location
+23. Near clients
+24. Ease GDPR compliance
+25. JS import only required firebase dependencies
     1.  `import firebase from 'firebase/app'; // ES6`
     2.  `const auth = firebase.auth();`
     3.  `const db = firebase.firestore();`
     4.  `const storage = firebase.storage();`
     5.  `const perf = firebase.performance();`
     6.  `const analytics = firebase.analytics();`
-27. Defer loading from script
+26. Defer loading from script
     1.  `<script defer src="/my-firebase-app.js"></script>`
-28. [FirebaseExtended](https://github.com/FirebaseExtended)
+27. [FirebaseExtended](https://github.com/FirebaseExtended)
     1.  Projects that are not officially staffed by Googlers but may be of use to Firebase developers.
-29. [ReactFire](https://www.npmjs.com/package/reactfire)
+28. [ReactFire](https://www.npmjs.com/package/reactfire)
     1.  Hooks, Context Providers, and Components that make it easy to interact with Firebase.
-30. [Performance Monitoring](https://firebase.google.com/docs/perf-mon/get-started-web)
+29. [Performance Monitoring](https://firebase.google.com/docs/perf-mon/get-started-web)
     1.  Enables automatic performance monitoring of web apps
-31. [Crashlytics](https://firebase.google.com/docs/crashlytics)
+30. [Crashlytics](https://firebase.google.com/docs/crashlytics)
     1.  Crash reporting solution for iOS, Android, and Unity with clear & actionable insights into app issues.
-32. [Analytics](https://firebase.google.com/docs/analytics)
+31. [Analytics](https://firebase.google.com/docs/analytics)
     1.  Provides insight on app usage and user engagement.
-33. User
+32. User
 
 ```javascript
    // Get user for event
@@ -311,6 +311,7 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
 33. User data modelling
 
 ```javascript
+
    /*
       1 to 1
    */
@@ -322,6 +323,7 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
       // Write data and don't overwrite existing
       return ref.set( { dataToWrite }, { merge: true } );
    }
+
    /*
       1 to Many
    */
@@ -335,6 +337,7 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
    }
    // Query sub-collections across users
    db.collectionGroup('orders').orderBy('date').where(...);
+
    /*
       Many to Many
    */

@@ -1,6 +1,8 @@
 # Next.js React TypeScript Tailwind Firebase Starter
 
-`yarn imagemin`
+```bash
+yarn imagemin
+```
 
 Creates optimized [MozJPEG](https://github.com/mozilla/mozjpeg) and [WebP](https://developers.google.com/speed/webp) images.
 
@@ -16,21 +18,33 @@ Destinations:
 6. `/public/img/xs/...-500w.jpg|webp`
 7. `/public/img/xxs/...-300w.jpg|webp`
 
-`yarn build-export`
+```bash
+yarn build-export
+```
 
 Creates an optimized production build. Uses [Static Site Generation](https://nextjs.org/docs/advanced-features/static-html-export) and exports an `/out/` directory for deployment as a static website.
 
-`yarn deploy`
+```bash
+yarn deploy
+```
 
 Deploys to firebase hosting.
 
-`yarn dev`
+```bash
+yarn dev
+```
 
-`yarn build`
+```bash
+yarn build
+```
 
-`yarn start`
+```bash
+yarn start
+```
 
-`yarn type-check`
+```bash
+yarn type-check
+```
 
 # Firebase best practices
 
@@ -127,8 +141,13 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
     1. `<your-project-name>.[dev|prod].web.app`
     2. `<your-project-name>.[dev|prod].firebaseapp.com`
 13. Multi-Site hosting:
+    | Hosting | |
+    | ------------------- | --------- |
+    | Storage | $0.026/GB |
+    | Data transfer | $0.15/GB |
+    | Custom domain & SSL | [x] |
 
-```
+```json
    "hosting": [
       {
          "target": "admin",
@@ -144,36 +163,34 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
 ```
 
 14. URL rewrites:
-    1. [SSR](https://nextjs.org/docs/basic-features/pages#server-side-rendering)
-    2. [SSG](https://nextjs.org/docs/basic-features/pages#static-generation-recommended)
-
-```
-   "rewrites": [
-      {
-         "source": "/path",
-         "function": "SSR-cloud-function-name"
-      },
-      {
-         "source": "**",
-         "destination": "/index.html"
-      }
-   ]
-```
-
+1.  [SSR](https://nextjs.org/docs/basic-features/pages#server-side-rendering)
+1.  [SSG](https://nextjs.org/docs/basic-features/pages#static-generation-recommended)
+    ```json
+       "rewrites": [
+          {
+             "source": "/path",
+             "function": "SSR-cloud-function-name"
+          },
+          {
+             "source": "**",
+             "destination": "/index.html"
+          }
+       ]
+    ```
 1.  Dynamic Links (into Android / iOS app)
 
-```
-  "rewrites": [
-     {
-        "source": "app-link",
-        "dynamicLinks": true
-     }
-  ]
+```json
+"rewrites": [
+   {
+      "source": "app-link",
+      "dynamicLinks": true
+   }
+]
 ```
 
 16. Set HTTP Headers
 
-```
+```json
    "hosting": [
       ...
       "headers": [
@@ -209,6 +226,155 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
 ```
 
 17. CI/CD with [Google cloud build](https://cloud.google.com/build)
-    1.  First 120 build-minutes per day : **Free**
-    2.  Additional build-minutes : **$0.003 per minute**
-18. ...
+    | Google cloud build | |
+    | ------------------------------- | --------------------- |
+    | First 120 build-minutes per day | **Free** |
+    | Additional build-minutes | **$0.003 per minute** |
+18. Databases
+    | Cloud Firestore [x] | Firebase Realtime Database |
+    | -------------------- | -------------------------- |
+    | $0.18 / GB stored | $5.00 / GB stored |
+    | $0.18 / 100k writes | $1.00 / GB downloaded |
+    | $0.06 / 100k reads | |
+    | $0.02 / 100k deletes | |
+19. [Backup data](https://cloud.google.com/sdk/gcloud/reference/beta/firestore/export)
+20. `$ gcloud beta firestore export gs://[BUCKET_NAME]`
+21. Secure Database
+22. Start in **production mode**:
+    1.  Your data is private by default.
+    2.  Client read/write access will only be granted as specified by your security rules.
+23. Database location
+24. Near clients
+25. Ease GDPR compliance
+26. JS import only required firebase dependencies
+    1.  `import firebase from 'firebase/app'; // ES6`
+    2.  `const auth = firebase.auth();`
+    3.  `const db = firebase.firestore();`
+    4.  `const storage = firebase.storage();`
+    5.  `const perf = firebase.performance();`
+    6.  `const analytics = firebase.analytics();`
+27. Defer loading from script
+    1.  `<script defer src="/my-firebase-app.js"></script>`
+28. [FirebaseExtended](https://github.com/FirebaseExtended)
+    1.  Projects that are not officially staffed by Googlers but may be of use to Firebase developers.
+29. [ReactFire](https://www.npmjs.com/package/reactfire)
+    1.  Hooks, Context Providers, and Components that make it easy to interact with Firebase.
+30. [Performance Monitoring](https://firebase.google.com/docs/perf-mon/get-started-web)
+    1.  Enables automatic performance monitoring of web apps
+31. [Crashlytics](https://firebase.google.com/docs/crashlytics)
+    1.  Crash reporting solution for iOS, Android, and Unity with clear & actionable insights into app issues.
+32. [Analytics](https://firebase.google.com/docs/analytics)
+    1.  Provides insight on app usage and user engagement.
+33. User
+
+```javascript
+   // Get user for event
+   async function getUser() {
+      const user = await auth.currentUser;
+      ...
+   }
+
+   // Listen to user
+   auth.onAuthStateChanged(user => {
+      ...
+   });
+```
+
+30. Auth
+
+```javascript
+   try {
+      const user = await auth.signInwithEmailAndPassword(email, password);
+      ...
+   }
+   catch(err) {
+      alert(err.message);
+   }
+```
+
+31. Lazy Registration
+
+```javascript
+   function lazySignIn() {
+      return auth.signInAnonymously();
+   }
+   ...
+   function linkSocialAccount() {
+      auth.currentUser.linkWithPopup( new firebase.auth.TwitterAuthProvider);
+   }
+```
+
+32. Customize auth email templates / handlers
+    1.  Email address verification / verifyEmail
+    2.  Password reset / resetPassword
+    3.  Email address change / ?
+    4.  ? / recoverEmail
+    5.  Custom SMTP settings / provider
+33. User data modelling
+
+```javascript
+   /*
+      1 to 1
+   */
+   async function oneToOne() {
+      // Get a userID
+      const { uid } = await auth.currentUser;
+      // Use it as a Firestore DocID
+      const ref = db.collection('accounts').doc(uid);
+      // Write data and don't overwrite existing
+      return ref.set( { dataToWrite }, { merge: true } );
+   }
+   /*
+      1 to Many
+   */
+   async function oneToMany() {
+      // Get a userID
+      const { uid } = await auth.currentUser;
+      // Use it as a Firestore DocID
+      const ref = db.collection('accounts').doc(uid).collection('orders');
+      // Add some data
+      return ref.add( { dataToAdd } );
+   }
+   // Query sub-collections across users
+   db.collectionGroup('orders').orderBy('date').where(...);
+   /*
+      Many to Many
+   */
+   async function manyToMany() {
+      // Get a userID
+      const { uid, displayName } = await auth.currentUser;
+      const ref = db.collection('chats');
+      const member = {
+         [uid]: displayName
+      }
+      ref.set( { members }, { merge: true });
+   }
+   const query = db.collection('chats').orderBy('members.jazzy-jeff');
+```
+
+34. Single v Realtime querying
+
+```javascript
+// Single query $
+query.get()
+// Realtime query $$$
+query.onSnapshot((q) =>
+  q.docChanges().map((change) => change[doc | newIndex | oldIndex | type])
+)
+```
+
+35. Enable offline persistence
+
+```javascript
+db.enablePersistence({ synchronizeTabs: true })
+```
+
+36. Wildcard string query
+
+```javascript
+const start = 'The Fast and The Furious'
+const end = start + '~'
+movies.orderBy('title').startAt(start).endAt(end)
+```
+
+37. ...

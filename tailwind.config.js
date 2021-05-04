@@ -12,9 +12,9 @@ module.exports = {
         doonagoreXL:
           "url('/img/xl/jordan-harrison-dame-lane-dublin-ireland-1920w.jpg')",
         doonagoreLG:
-          "url('/img/lg/jordan-harrison-dame-lane-dublin-ireland-1560w.jpg')",
+          "url('/img/lg/jordan-harrison-dame-lane-dublin-ireland-1536w.jpg')",
         doonagoreMD:
-          "url('/img/md/jordan-harrison-dame-lane-dublin-ireland-1240w.jpg')",
+          "url('/img/md/jordan-harrison-dame-lane-dublin-ireland-1280w.jpg')",
         doonagoreSM:
           "url('/img/sm/jordan-harrison-dame-lane-dublin-ireland-800w.jpg')",
         doonagoreXS:

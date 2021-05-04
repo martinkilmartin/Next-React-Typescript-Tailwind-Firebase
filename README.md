@@ -55,16 +55,18 @@ yarn type-check
 Run a compile on TypeScript files as defined by tsconfig.json
 
 ```bash
-yarn prettier-check && yarn prettier-fix
+yarn prettier-check
+
+yarn prettier-fix
 ```
 
-Opinionated code formatting
+[Opinionated code formatting](https://prettier.io/)
 
 ```bash
 yarn prepare
 ```
 
-Modern native git hooks via Husky
+Modern native git hooks via [Husky](https://typicode.github.io/husky/#/)
 
 # Firebase best practices
 

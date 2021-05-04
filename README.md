@@ -350,7 +350,7 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
       }
       ref.set( { members }, { merge: true });
    }
-   const query = db.collection('chats').orderBy('members.jazzy-jeff');
+   const query = db.collection('chats').orderBy('members.<user-name>');
 ```
 
 34. Single v Realtime querying
@@ -468,4 +468,42 @@ batch.commit()
 ```
 
 41. File Storage
-    ...
+
+```javascript
+const storageRef = storage.refFromURL(
+  'gs://<your-project-name>-dev|prod.appspot.com/logo.svg'
+)
+const storageRef = storage.refFromURL(
+  'https://firebasestorage.googleapis.com/v0/b/<your-project-name>-dev.appspot.com/logo.svg?...&token=...'
+)
+```
+
+42. List all files
+
+```javascript
+async function allFiles() {
+  const dir = storage.ref('images')
+  const allFiles = await dir.listAll()
+}
+```
+
+43. Upload file(s)
+
+```javascript
+const storageRef = storage.ref('image.png');
+const task = storageRef.put( someBlob );
+
+// Track progress
+task.on(firebase.storage.TaskEvent.STATE_CHANGED,
+   e => {
+      const progress = e.bytesTransferred / e.totalBytes;
+   });
+
+// Concurrently
+const files = [...];
+for ( const f of files ) {
+   storage.ref(f).put(someFile, { customMetaData: { userID, platform } });
+}
+```
+
+44. [Resize Images](https://firebase.google.com/products/extensions/storage-resize-images) [Extension](https://firebase.google.com/products/extensions)

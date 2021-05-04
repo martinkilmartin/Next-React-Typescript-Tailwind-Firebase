@@ -17,7 +17,9 @@ import { IMAGE_PATH, IMAGE_PATHS, IMAGE_SIZES } from './constants/images.mjs'
           .resize(size)
           .noProfile()
           .write(
-            `${IMAGE_PATH + IMAGE_PATHS[key]}/${CURRENT_FILE_NAME}-${size}w${CURRENT_FILE_EXT}`,
+            `${
+              IMAGE_PATH + IMAGE_PATHS[key]
+            }/${CURRENT_FILE_NAME}-${size}w${CURRENT_FILE_EXT}`,
             function (err) {
               if (err) console.error(err)
             }

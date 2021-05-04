@@ -4,9 +4,9 @@
 yarn imagemin
 ```
 
-Creates optimized [MozJPEG](https://github.com/mozilla/mozjpeg) and [WebP](https://developers.google.com/speed/webp) images.
+Creates optimized [MozJPEG](https://github.com/mozilla/mozjpeg) and [WebP](https://developers.google.com/speed/webp) images from .jpg located under a source directory.
 
-Source directory: `/public/img/originals/*`
+Source directory: `/public/img/originals/*.jpg`
 
 Destinations:
 
@@ -34,17 +34,37 @@ Deploys to firebase hosting.
 yarn dev
 ```
 
+Next.js development build with development sever
+
 ```bash
 yarn build
 ```
+
+Next.js production build
 
 ```bash
 yarn start
 ```
 
+Next.js production server
+
 ```bash
 yarn type-check
 ```
+
+Run a compile on TypeScript files as defined by tsconfig.json
+
+```bash
+yarn prettier-check && yarn prettier-fix
+```
+
+Opinionated code formatting
+
+```bash
+yarn prepare
+```
+
+Modern native git hooks via Husky
 
 # Firebase best practices
 

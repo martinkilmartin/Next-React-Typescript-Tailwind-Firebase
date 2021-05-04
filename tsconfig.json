@@ -22,7 +22,9 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    "scripts/constants/imageSizes.mjs",
-    "scripts/constants/imagePaths.mjs"
+    "scripts/constants/images.mjs",
+    "scripts/gm-resize.mjs",
+    "scripts/imagemin-mozjpeg.mjs",
+    "scripts/imagemin-webp.mjs"
   ]
 }

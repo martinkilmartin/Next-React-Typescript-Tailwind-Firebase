@@ -21,10 +21,10 @@ const IndexPage = () => (
     <ImageBackground backgroundImage="doonagoreXS sm:doonagoreSM md:doonagoreMD lg:doonagoreLG xl:doonagoreXL 2xl:bg-doonagoreXXL">
       <Header />
       <Main>
-        <h1 className="mt-8 font-serif text-2xl font-bold text-center text-white bg-green-600 opacity-80 sm:text-5xl sm:mt-24 drop-shadow">
+        <h1 className="mt-8 font-serif text-2xl font-bold text-center text-black sm:text-5xl sm:mt-24 drop-shadow">
           Michael Cowell Irish Tours
         </h1>
-        <h2 className="mt-8 font-serif font-bold text-center text-white bg-yellow-600 sm:bg-opacity-0 text-1xl sm:text-3xl drop-shadow">
+        <h2 className="mt-8 font-serif font-bold text-center text-black text-1xl sm:text-3xl drop-shadow">
           Individually tailored and specialized tours
         </h2>
         <div className="mt-8 text-center">

@@ -106,7 +106,7 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
     6. Functions Setup
        1. ❯ TypeScript
        2. ESLint? Y
-       3. npm install? n
+       3. npm install? y
     7. Hosting Setup
        1. public
        2. SPA? Y
@@ -137,6 +137,7 @@ Source: [Fireship - YouTube](https://www.youtube.com/watch?v=iWEgpdVSZyg)
     6. `"serve-prod": "firebase serve --project <your-project-name>-prod"`
     7. `"deploy-dev": "firebase deploy --only hosting --project <your-project-name>-dev"`
     8. `"deploy-prod": "firebase deploy --only hosting --project <your-project-name>-prod"`
+    9. `"deploy-functions": "firebase deploy --only functions"`
 12. Default domains:
     1. `<your-project-name>.[dev|prod].web.app`
     2. `<your-project-name>.[dev|prod].firebaseapp.com`
@@ -507,3 +508,159 @@ for ( const f of files ) {
 ```
 
 44. [Resize Images](https://firebase.google.com/products/extensions/storage-resize-images) [Extension](https://firebase.google.com/products/extensions)
+
+45. Admin Scripts with Node.js
+
+    1. Project Settings > Service Accounts > Admin SDK
+       1. https://console.firebase.google.com/u/1/project/[your-project-name]/settings/serviceaccounts/adminsdk
+    2. Add admin dev dependency
+
+    ```bash
+     yarn add firebase-admin -D
+    ```
+
+    3. Use in script
+
+    ```javascript
+    const admin = require('firebase-admin')
+    admin.initializeApp()
+    ```
+
+    4. Save credentials
+
+    ```bash
+    export GOOGLE_APPLICATION_CREDENTIALS
+    ```
+
+    5. Add faker dev dependency
+
+    ```bash
+    yarn add faker -D
+    ```
+
+    6. Add fake date to store
+
+    ```javascript
+    const faker = require('faker');
+    const db = admin.firestore();
+    for (const i of [...]) {
+       db.collection('users').add({
+          name: faker.name.firstName(),
+          avatar: faker.image.avatar(),
+       });
+    }
+    ```
+
+46. [Firebase Management API](https://firebase.google.com/docs/projects/api/reference/rest)
+
+    1. The Firebase Management API enables programmatic setup and management of Firebase projects, including a project's Firebase resources and Firebase apps.
+    2. [Workflows: Set up and manage a Firebase project using the REST API](https://firebase.google.com/docs/projects/api/workflow_set-up-and-manage-project?platform=web)
+
+47. [Google APIs Client Library for Node.js](https://yarnpkg.com/package/googleapis)
+
+    ```bash
+    yarn add googleapis
+    ```
+
+    ```javascript
+    const gapi = require('googleapis')
+    ```
+
+48. Idempotent Cloud Functions
+
+    ```javascript
+    import * as functions from 'firebase-functions'
+    export const myCloudFunction = functions
+      .runWith({ memory: '2GB', timeoutSeconds: 540 })
+      .firestore.document('')
+      .onCreate((snap, context) => {
+        return context.eventId
+      })
+    ```
+
+49. Infinite Loop Cloud Functions $$$$$
+
+    ```javascript
+    export const myCostlyInfiniteLoopCloudFunction = functions.firestore
+      .document('user/{userId}')
+      .onWrite((snap, context) => {
+        // Prevent infinite loop
+        if (snap.after.isEqual(snap.before)) return
+        return snap.after.ref.update({ forever: true })
+      })
+    ```
+
+50. Background cloud functions must always return a promise
+
+    ```javascript
+      .firestore
+      .document('user/{userId}')
+      .onWrite(async (snap, context) => {
+         await Promise.resolve();
+         return;
+      })
+    ```
+
+51. Prefer PubSub for internal functions
+
+    ```javascript
+    export const myPubSub = functions.pubsub
+      .topic('title')
+      .onPublish((message) => {
+        return message
+      })
+    ```
+
+52. Prefer Callable for user authentication
+
+    ```javascript
+    export const myCall = functions.https.onCall(async (data, context) => {
+      const user = context.auth
+      if (user) {
+        res.send(`Hello ${user.firstName}.`)
+      } else {
+        res.send('Hello.')
+      }
+    })
+    ```
+
+53. Authenticated batch delete
+
+    ```javascript
+    export const myBatchDelete = functions.https.onCall(
+      async (data, context) => {
+        const user = context.auth
+        const collectionPath = data.collection
+        const batchDelete: any = async () => {
+          const snapshots = await db.collection(collectionPath).limit(100).get()
+          if (snapshots.size === 0) return
+          const batch = db.batch()
+          snapshots.docs.forEach((doc) => bath.delete(doc.ref))
+          await batch.commit()
+          return batchDelete()
+        }
+        if (user && collectionPath) {
+          batchDelete()
+        }
+      }
+    )
+    ```
+
+54. [Google Cloud's operations suite](https://cloud.google.com/products/operations) (formerly Stackdriver)
+    Monitor, troubleshoot, and improve application performance on your Google Cloud environment.
+
+- Collect metrics, logs, and traces across Google Cloud and your applications
+- Use built-in out-of-the-box dashboards and views to monitor the platform and applications
+- Query and analyze these signals
+- Set up appropriate performance and availability indicators
+- Set up alerts and notification rules with your existing systems
+
+55. [Analytics](https://firebase.google.com/products/analytics)
+
+```javascript
+const analytics = firebase.analytics()
+function onLogin() {
+  analytics.logEvent('login', { method: 'google' })
+  analytics.setUserProperties({ awesome: true })
+}
+```

@@ -18,7 +18,7 @@ const IndexPage = () => (
       title="Michael Cowell Irish Tours"
       description="I would be happy to contribute to a successful tour of Ireland."
     />
-    <ImageBackground backgroundImage="doonagoreXS sm:doonagoreSM md:doonagoreMD lg:doonagoreLG xl:doonagoreXL 2xl:bg-doonagoreXXL">
+    <ImageBackground backgroundImage="bg-doonagoreXS sm:bg-doonagoreSM md:bg-doonagoreMD lg:bg-doonagoreLG xl:bg-doonagoreXL 2xl:bg-doonagoreXXL">
       <Header />
       <Main>
         <h1 className="mt-8 font-serif text-2xl font-bold text-center text-black sm:text-5xl sm:mt-24 drop-shadow">

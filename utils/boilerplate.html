@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- efines the encoding of the website. utf-8 is the standard. -->
+    <meta charset="utf-8">
+    <!-- Use device width instead of zooming out. Good with mobile friendly pages. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Control where resources are loaded from. -->
+    <!-- Place as early in the <head> as possible. -->
+    <!-- Only applies to resources that are declared after it. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <!-- Name of web application (only should be used if the website is used as an app) -->
+    <meta name="application-name" content="WebApp Name">
+    <!-- A short title that describes the page content and distinguishes it from other pages. -->
+    <!-- Put unique and most relevant information first. -->
+    <!-- For pages that are part of a multi-step process, include the current step in the page title. -->
+    <!-- https://www.w3.org/WAI/tips/writing/#provide-informative-unique-page-titles -->
+    <title>Unique & Informative WebPage Name</title>
+    <!-- Theme Color for Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Short description of the document (limit to 150 characters) -->
+    <!-- This content *may* be used as a part of search engine results. -->
+    <meta name="description" content="A description of the page">
+    <!-- The Open Graph protocol. -->
+    <!-- https://ogp.me -->
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Content Title">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:image:alt" content="A description of what is in the image (not a caption)">
+    <meta property="og:description" content="Description Here">
+    <meta property="og:site_name" content="Site Name">
+    <meta property="og:locale" content="en_IE">
+    <!-- Facebook Instant Articles -->
+    <!--https://developers.facebook.com/docs/instant-articles/guides/articlecreate -->
+    <meta property="op:markup_version" content="v1.0">
+    <!-- The style to be used for this article -->
+    <meta property="fb:article_style" content="myarticlestyle">
+    <!-- Twitter Card. -->
+    <!-- https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="https://example.com/page.html">
+    <meta name="twitter:title" content="Content Title">
+    <meta name="twitter:description" content="Content description less than 200 characters">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+    <meta name="twitter:image:alt"
+        content="A text description of the image conveying the essential nature of an image to users who are visually impaired. Maximum 420 characters.">
+    <!-- disallow Twitter from using your site's info for personalization purposes -->
+    <meta name="twitter:dnt" content="on">
+    <!-- Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT">
+    <!-- Launch Icon Title -->
+    <meta name="apple-mobile-web-app-title" content="App Title">
+    <!-- Enable standalone (full-screen) mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Status bar appearance (has no effect unless standalone mode is enabled) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- iOS app deep linking -->
+    <meta name="apple-itunes-app" content="app-id=APP-ID, app-argument=http/url-sample.com">
+    <!-- Add to home screen -->
+    <!-- More info: https://developer.chrome.com/multidevice/android/installtohomescreen -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Android app deep linking -->
+    <meta name="google-play-app" content="app-id=package-name">
+    <!-- Icon in the highest resolution we need it for -->
+    <link rel="icon" sizes="192x192" href="/path/to/icon.png">
+    <!-- Safari Pinned Tab Icon -->
+    <link rel="mask-icon" href="/path/to/icon.svg" color="blue">
+    <!-- Launch Icon (reuse 192px icon.png) -->
+    <link rel="apple-touch-icon" href="/path/to/apple-touch-icon.png">
+    <!-- Launch Screen Image -->
+    <link rel="apple-touch-startup-image" href="/path/to/launch.png">
+    <!-- Helps prevent duplicate content issues -->
+    <link rel="canonical" href="https://example.com/article/?page=2">
+    <!-- Links to an AMP HTML version of the current document -->
+    <link rel="amphtml" href="https://example.com/path/to/amp-version.html">
+    <!-- Links to a JSON file that specifies "installation" credentials for the web applications -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Notifies a URL when you link to it on your document -->
+    <link rel="webmention" href="https://example.com/webmention">
+    <!-- iOS app deep linking -->
+    <link rel="alternate" href="ios-app://APP-ID/http/url-sample.com">
+    <!-- Android app deep linking -->
+    <link rel="alternate" href="android-app://package-name/http/url-sample.com">
+    <!-- Google Chrome -->
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/APP_ID">
+</head>
+
+<body>
+    <a href="#maincontent">Skip to main content</a>
+    <a href="#search">Skip to search</a>
+    <a href="#footer">Skip to footer</a>
+    <header>
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <style>
+                path {
+                    fill: #123456;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                    path {
+                        fill: #FFFFFF;
+                    }
+                }
+            </style>
+            <path d="M75 0 L0 100 L125 100 Z" />
+        </svg>
+        <nav role="navigation" aria-label="Main">
+            <ul role="menu">
+                <li role="none">
+                    <a aria-current="page" role="menuitem" href="/">Home</a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="/about">About</a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="/contact">Contact</a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="/services">Services</a>
+                </li>
+            </ul>
+        </nav>
+        <form role="search">
+            <input id="search" type="search" value="" placeholder="Search" aria-label="search text" size="20">
+            <input type="submit" value="Search">
+        </form>
+    </header>
+    <main id="maincontent"></main>
+    <footer id="footer">
+        <nav aria-label="Footer">
+            <ul role="menu">
+                <li role="none">
+                    <a role="menuitem" href="#" target="_blank" title="twitter">
+                        <i class="fa fa-twitter">Twitter</i>
+                    </a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="#" target="_blank" title="facebook">
+                        <i class="fa fa-facebook">Facebook</i>
+                    </a>
+                </li>
+                <li role="none"><a role="menuitem" href="#" target="_blank" title="instagram">
+                        <i class="fa fa-instagram">Instagram</i>
+                    </a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="#" target="_blank" title="linkedin">
+                        <i class="fa fa-linkedin">LinkedIn</i>
+                    </a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="#" target="_blank" title="youtube">
+                        <i class="fa fa-youtube">YouTube</i>
+                    </a>
+                </li>
+            </ul>
+            <ul role="menu">
+                <li role="none">
+                    <a aria-current="page" role="menuitem" href="/">Home</a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="/about">About</a>
+                </li role="none">
+                <li role="none">
+                    <a role="menuitem" href="/contact">Contact</a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="/services">Services</a>
+                </li>
+            </ul>
+            <ul role="menu">
+                <li role="none">
+                    <a role="menuitem" href="/privacy">Privacy Policy</a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="/cookies">Cookie Policy</a>
+                </li>
+                <li role="none">
+                    <a role="menuitem" href="/terms">Terms</a>
+                </li>
+            </ul>
+        </nav>
+        <address>
+            <a href="mail@example.com">mail@example.com</a><br />
+            <a href="tel:+1234567890">(123) 456-7890</a><br />
+            AwesomeCompany<br />
+            123 Main St.<br />
+            Galway, A23&nbspDE6G<br />
+            Ireland
+        </address>
+        <p>
+            © 2021 Awesome Company All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>

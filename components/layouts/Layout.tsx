@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 
-import Container from './Container'
-import Footer from './Footer'
+import Container from '../containers/Container'
+import Footer from '../landmarks/Footer'
 
 import 'tailwindcss/tailwind.css'
 

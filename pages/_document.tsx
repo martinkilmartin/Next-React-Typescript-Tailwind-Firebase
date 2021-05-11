@@ -18,6 +18,15 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head />
         <body>
+          <a href="#main" className="sr-only focus:not-sr-only">
+            Skip to main content
+          </a>
+          <a href="#search" className="sr-only focus:not-sr-only">
+            Skip to search
+          </a>
+          <a href="#footer" className="sr-only focus:not-sr-only">
+            Skip to footer
+          </a>
           <Main />
           <NextScript />
         </body>

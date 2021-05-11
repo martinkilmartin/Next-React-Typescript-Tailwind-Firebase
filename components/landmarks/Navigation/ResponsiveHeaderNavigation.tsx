@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Brand from '../Brand'
+import Brand from '../../landmarks/Brand'
 import NavigationLink from './NavigationLink'
 
 function ResponsiveHeaderNavigation() {

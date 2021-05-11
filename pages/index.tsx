@@ -1,22 +1,35 @@
 import React from 'react'
+import Color from 'color'
+import { GetStaticProps } from 'next'
 
-import Layout from '../components/Layout'
-import MyHead from '../components/MyHead'
-import Header from '../components/Header'
-import Main from '../components/Main'
+import Layout from '../components/layouts/Layout'
+import MyHead from '../components/landmarks/MyHead'
+import Header from '../components/landmarks/Header'
+import Main from '../components/landmarks/Main'
 import SimpleButton from '../components/ui/Buttons/SimpleButton'
 import Picture from '../components/ui/Images/Picture'
 
 import StackedCard from '../components/ui/Cards/StackedCard'
 
-import ImageBackground from '../components/ImageBackground'
+import ImageBackground from '../components/ui/Images/ImageBackground'
 import 'tailwindcss/tailwind.css'
 
-const IndexPage = () => (
+type Props = {
+  baseURL: string
+}
+
+const IndexPage = ({ baseURL }: Props) => (
   <Layout>
     <MyHead
       title="Michael Cowell Irish Tours"
       description="I would be happy to contribute to a successful tour of Ireland."
+      ogImage={`${baseURL}/img/xxl/conor-luddy-coliemore-harbour-dublin-ireland-2400w.jpg`}
+      ogImageAlt="Conor Luddy's photo of Coliemore Harbour, Dublin."
+      ogSiteName="MCT Irish Tours"
+      ogURL={baseURL}
+      icon="/logo-light.svg"
+      maskIcon="/logo-light.svg"
+      maskIconColor={new Color('green')}
     />
     <ImageBackground backgroundImage="bg-doonagoreXS sm:bg-doonagoreSM md:bg-doonagoreMD lg:bg-doonagoreLG xl:bg-doonagoreXL 2xl:bg-doonagoreXXL">
       <Header />
@@ -84,5 +97,10 @@ const IndexPage = () => (
     </div>
   </Layout>
 )
+
+export const getStaticProps: GetStaticProps = async () => {
+  const baseURL: string = process.env.HOST ?? window.location.href
+  return { props: { baseURL } }
+}
 
 export default IndexPage

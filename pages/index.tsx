@@ -4,14 +4,12 @@ import { GetStaticProps } from 'next'
 import Layout from '../components/layouts/Layout'
 import HTMLHead from '../components/landmarks/HTMLHead'
 
-import 'tailwindcss/tailwind.css'
-
 type Props = {
   baseURL: string
 }
 
 const IndexPage = ({ baseURL }: Props) => (
-  <Layout>
+  <Layout brand="Yoo.ie" logo="/logo-dark.svg">
     <HTMLHead
       title="Yoo.ie"
       description="User Interfaces and eCommerce Integrations"

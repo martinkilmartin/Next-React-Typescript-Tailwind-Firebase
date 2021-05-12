@@ -3,7 +3,6 @@ import { GetStaticProps } from 'next'
 
 import Layout from '../components/layouts/Layout'
 import HTMLHead from '../components/landmarks/HTMLHead'
-import Header from '../components/landmarks/Header'
 
 import 'tailwindcss/tailwind.css'
 
@@ -24,7 +23,6 @@ const IndexPage = ({ baseURL }: Props) => (
       maskIcon="/logo-dark.svg"
       maskIconColor={new Color('green')}
     />
-    <Header brand="Yoo.ie" logo="/logo-dark.svg" />
   </Layout>
 )
 

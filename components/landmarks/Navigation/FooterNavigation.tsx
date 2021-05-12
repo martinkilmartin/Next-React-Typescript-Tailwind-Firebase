@@ -6,7 +6,7 @@ import {
   LEGAL_LINKS,
 } from '../../../constants/links'
 
-function HeaderNavigation() {
+function FooterNavigation() {
   const router = useRouter()
   return (
     <nav aria-label="Footer">
@@ -54,4 +54,4 @@ function HeaderNavigation() {
   )
 }
 
-export default HeaderNavigation
+export default FooterNavigation

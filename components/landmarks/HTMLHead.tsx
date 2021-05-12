@@ -22,8 +22,8 @@ type Props = {
   twitterImage?: string
   twitterImageAlt?: string
   icon: string
-  maskIcon: string
-  maskIconColor: Color
+  maskIcon?: string
+  maskIconColor?: Color
 }
 
 const HTMLHead = ({
@@ -46,15 +46,15 @@ const HTMLHead = ({
   twitterImage = ogImage,
   twitterImageAlt = ogImageAlt,
   icon,
-  maskIcon,
-  maskIconColor,
+  maskIcon = icon,
+  maskIconColor = themeColor,
 }: Props) => (
   <Head>
     <title>{title}</title>
     <meta charSet="utf-8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     {/* <meta httpEquiv="Content-Security-Policy" content="default-src 'self'" /> */}
-    {appName ? <meta name="application-name" content="WebApp Name" /> : ''}
+    {appName && <meta name="application-name" content="WebApp Name" />}
     <meta name="theme-color" content={themeColor.toString()} />
     <meta name="description" content={description} />
     {/* Open Graph */}
@@ -68,16 +68,8 @@ const HTMLHead = ({
     <meta property="og:locale" content={ogLocale} />
     {/* Twitter Card */}
     <meta name="twitter:card" content="summary" />
-    {twitterSite ? (
-      <meta name="twitter:site" content={`@${twitterSite}`} />
-    ) : (
-      ''
-    )}
-    {twitterCreator ? (
-      <meta name="twitter:creator" content={`@${twitterCreator}`} />
-    ) : (
-      ''
-    )}
+    {twitterSite && <meta name="twitter:site" content={`@${twitterSite}`} />}
+    {twitterCreator && <meta name="twitter:creator" content={`@${twitterCreator}`} />}
     <meta name="twitter:url" content={twitterURL} />
     <meta name="twitter:title" content={twitterTitle} />
     <meta name="twitter:description" content={twitterDescription} />

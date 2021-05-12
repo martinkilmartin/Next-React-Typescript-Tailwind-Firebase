@@ -11,8 +11,8 @@ type Props = {
 const IndexPage = ({ baseURL }: Props) => (
   <Layout>
     <HTMLHead
-      title="Yoo.ie"
-      description="User Interfaces and eCommerce Integrations"
+      title="Welcome to Yoo.ie"
+      description="Easier and faster than Shopify. Quickly start selling online with User Interfaces and eCommerce Integrations from Yoo.ie."
       ogImage={`${baseURL}/img/xxl/conor-luddy-coliemore-harbour-dublin-ireland-2400w.jpg`}
       ogImageAlt="Conor Luddy's photo of Coliemore Harbour, Dublin."
       ogSiteName="YooIe"

@@ -2,14 +2,9 @@ import Brand from '../ui/Brand'
 import HeaderNavigation from './Navigation/HeaderNavigation'
 import SearchInput from '../ui/Inputs/SearchInput'
 
-type Props = {
-  brand: string
-  logo: string
-}
-
-const Header = ({ brand, logo }: Props) => (
+const Header = () => (
   <header>
-    <Brand alt={brand} logo={logo} />
+    <Brand />
     <HeaderNavigation />
     <SearchInput />
   </header>

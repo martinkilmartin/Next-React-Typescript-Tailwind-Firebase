@@ -6,13 +6,11 @@ import Footer from '../landmarks/Footer'
 
 type Props = {
   children: ReactNode
-  brand: string
-  logo: string
 }
 
-const Layout = ({ brand, logo, children }: Props) => (
+const Layout = ({ children }: Props) => (
   <Container>
-    <Header brand={brand} logo={logo} />
+    <Header />
     {children}
     <Footer />
   </Container>

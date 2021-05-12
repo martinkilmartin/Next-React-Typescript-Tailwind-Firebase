@@ -1,9 +1,9 @@
 type Props = {
-  alt: string
-  logo: string
+  alt?: string
+  logo?: string
 }
 
-const Brand = ({ alt, logo }: Props) => (
+const Brand = ({ alt = 'Yoo.ie', logo = '/logo-dark.svg' }: Props) => (
   <img src={logo} alt={alt} width={64} height={64} />
 )
 

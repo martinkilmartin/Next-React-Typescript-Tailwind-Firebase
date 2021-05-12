@@ -9,7 +9,7 @@ type Props = {
 }
 
 const IndexPage = ({ baseURL }: Props) => (
-  <Layout brand="Yoo.ie" logo="/logo-dark.svg">
+  <Layout>
     <HTMLHead
       title="Yoo.ie"
       description="User Interfaces and eCommerce Integrations"

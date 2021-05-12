@@ -11,7 +11,7 @@ import {
   DEFAULT_IMAGES_BASE_PATH,
   DEFAULT_IMAGES_SUFFIX,
   IMAGE_TYPES,
-} from '../../../constants/images'
+} from '../../../../constants/images'
 
 type Props = {
   src: string

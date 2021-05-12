@@ -1,6 +1,6 @@
-import { IMAGES_BASE_PATH, IMAGE_SIZES } from '../../../constants/images'
+import { IMAGES_BASE_PATH, IMAGE_SIZES } from '../../../../constants/images'
 
-import { ImageSize } from '../../../interfaces'
+import { ImageSize } from '../../../../interfaces'
 
 type Props = {
   src: string

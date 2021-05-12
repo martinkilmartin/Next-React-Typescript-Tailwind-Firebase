@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 import Container from '../containers/Container'
 import Footer from '../landmarks/Footer'

@@ -1,18 +1,17 @@
-import React from 'react'
-
-import ResponsiveHeaderNavigation from './Navigation/ResponsiveHeaderNavigation'
+import Brand from '../ui/Brand'
+import HeaderNavigation from './Navigation/HeaderNavigation'
+import SearchInput from '../ui/Inputs/SearchInput'
 
 type Props = {
-  styles?: string
+  brand: string
+  logo: string
 }
 
-const Header = ({
-  styles = 'h-20 px-2 pt-2 pb-3 sm:justify-between sm:flex-shrink-0 sm:px-2 sm:mx-auto sm:relative sm:flex sm:items-center sm:max-w-7xl lg:px-8',
-}: Props) => (
+const Header = ({ brand, logo }: Props) => (
   <header>
-    <div className={styles}>
-      <ResponsiveHeaderNavigation />
-    </div>
+    <Brand alt={brand} logo={logo} />
+    <HeaderNavigation />
+    <SearchInput />
   </header>
 )
 

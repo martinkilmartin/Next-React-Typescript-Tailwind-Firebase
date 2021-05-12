@@ -26,7 +26,7 @@ type Props = {
   maskIconColor: Color
 }
 
-const MyHead = ({
+const HTMLHead = ({
   title,
   appName,
   themeColor = new Color('#000'),
@@ -92,4 +92,4 @@ const MyHead = ({
   </Head>
 )
 
-export default MyHead
+export default HTMLHead

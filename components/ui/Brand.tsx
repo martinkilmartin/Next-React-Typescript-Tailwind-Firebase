@@ -1,15 +1,10 @@
-import React from 'react'
-
 type Props = {
-  src: string
   alt: string
-  width: string | number
-  height: string | number
-  styles?: string
+  logo: string
 }
 
-const Brand = ({ src, alt, width, height, styles }: Props) => (
-  <img src={src} alt={alt} width={width} height={height} className={styles} />
+const Brand = ({ alt, logo }: Props) => (
+  <img src={logo} alt={alt} width={64} height={64} />
 )
 
 export default Brand

@@ -1,25 +1,17 @@
-import React from 'react'
 import Link from 'next/link'
 
 type Props = {
   href: string
   ariaCurrent?: false | true | 'page' | 'step' | 'location' | 'date' | 'time'
   text: string
-  style?: string
+  icon?: string
 }
 
-function NavigationLink({ href, ariaCurrent = false, text }: Props) {
+function NavigationLink({ href, ariaCurrent = false, text, icon }: Props) {
   return (
     <Link href={href}>
-      <a
-        className={
-          ariaCurrent
-            ? 'block px-4 py-2 mt-4 mr-4 font-bold text-white bg-transparent sm:bg-green-900 sm:rounded sm:inline-block sm:mt-0 sm:hover:text-white hover:bg-green-700'
-            : 'block px-4 py-2 mt-4 mr-4 font-bold text-white shadow-lg bg-transparent sm:bg-green-500 sm:rounded sm:inline-block sm:mt-0 sm:hover:text-white hover:bg-green-700'
-        }
-        aria-current={ariaCurrent}
-      >
-        {text}
+      <a role="menuitem" aria-current={ariaCurrent}>
+        {icon ? <i className={`fa fa-${icon}`}>{text}</i> : text}
       </a>
     </Link>
   )

@@ -1,19 +1,16 @@
 import Color from 'color'
 
 import { GetStaticProps } from 'next'
-import { CAROUSEL_ITEM } from '../interfaces/HTML'
-import { sampleCarouselData } from '../utils/sample-data'
 
 import Layout from '../components/layouts/Layout'
 import HTMLHead from '../components/landmarks/HTMLHead'
-import Carousel from '../components/ui/Images/Carousel/Carousel'
+import Hero from '../components/ui/Hero'
 
 type Props = {
   baseURL: string
-  carouselItems: CAROUSEL_ITEM[]
 }
 
-const IndexPage = ({ baseURL, carouselItems }: Props) => (
+const IndexPage = ({ baseURL }: Props) => (
   <Layout>
     <HTMLHead
       title="Welcome to Yoo.ie"
@@ -26,14 +23,13 @@ const IndexPage = ({ baseURL, carouselItems }: Props) => (
       maskIcon="/logo-dark.svg"
       maskIconColor={new Color('green')}
     />
-    <Carousel label="Test carousel" carouselItems={carouselItems} />
+    <Hero />
   </Layout>
 )
 
 export const getStaticProps: GetStaticProps = async () => {
   const baseURL: string = process.env.NEXT_PUBLIC_HOST ?? ''
-  const carouselItems: CAROUSEL_ITEM[] = sampleCarouselData
-  return { props: { baseURL, carouselItems } }
+  return { props: { baseURL } }
 }
 
 export default IndexPage

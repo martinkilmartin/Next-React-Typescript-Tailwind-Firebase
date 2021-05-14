@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next'
 
 import Layout from '../components/layouts/Layout'
 import HTMLHead from '../components/landmarks/HTMLHead'
-import Hero from '../components/ui/Hero'
+import Hero from '../components/ui/Heroes/Hero'
 
 type Props = {
   baseURL: string
@@ -23,7 +23,11 @@ const IndexPage = ({ baseURL }: Props) => (
       maskIcon="/logo-dark.svg"
       maskIconColor={new Color('green')}
     />
-    <Hero />
+    <Hero
+      title="Faster and Easier than"
+      highlighted="Shopify or Square"
+      speel="Quickly start selling online with User Interfaces and eCommerce Integrations from Yoo.ie."
+    />
   </Layout>
 )
 

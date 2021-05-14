@@ -52,31 +52,31 @@ export const COMPANY_LINKS: LINK[] = [
 
 export const SOCIAL_LINKS: LINK[] = [
   {
-    path: '/@yoo_._ie',
+    path: 'https://twitter.com/@yoo_._ie',
     text: 'Twitter',
     icon: 'twitter',
     target: '_blank',
   },
   {
-    path: '/@yoo_._ie',
+    path: 'https://linkedin.com/@yoo_._ie',
     text: 'LinkedIn',
     icon: 'linkedin',
     target: '_blank',
   },
   {
-    path: '/@yoo_._ie',
+    path: 'https://facebook.com/@yoo_._ie',
     text: 'Facebook',
     icon: 'facebbok',
     target: '_blank',
   },
   {
-    path: '/@yoo_._ie',
+    path: 'https://instagram.com/@yoo_._ie',
     text: 'Instagram',
     icon: 'instagram',
     target: '_blank',
   },
   {
-    path: '/@yoo_._ie',
+    path: 'https://reddit.com/@yoo_._ie',
     text: 'Reddit',
     icon: 'reddit',
     target: '_blank',

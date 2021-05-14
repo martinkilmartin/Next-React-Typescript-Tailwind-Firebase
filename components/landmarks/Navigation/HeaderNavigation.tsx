@@ -1,13 +1,10 @@
 import { useState } from 'react'
-import { useRouter } from 'next/router'
-import NavigationLink from './NavigationLink'
 import MenuButton from '../../ui/Buttons/MenuButton'
-import { HEADER_LINKS } from '../../../constants/links'
+import HeaderMenu from './HeaderMenu'
 
 function HeaderNavigation() {
   const MOBILE_MENU_ID = 'mobile-menu'
   const [open, setOpen] = useState(false)
-  const router = useRouter()
   return (
     <nav
       role="navigation"
@@ -23,19 +20,7 @@ function HeaderNavigation() {
           sRMessage="Open main menu"
         />
       </div>
-      <ul role="menu" className={open ? 'block sm:block' : 'hidden sm:block'}>
-        {HEADER_LINKS.map((link, index) => (
-          <li role="none" key={link.text + index}>
-            <NavigationLink
-              href={link.path.toString()}
-              ariaCurrent={
-                router.asPath === link.path.toString() ? 'page' : false
-              }
-              text={link.text}
-            />
-          </li>
-        ))}
-      </ul>
+      <HeaderMenu open={open} />
     </nav>
   )
 }

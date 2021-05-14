@@ -5,7 +5,7 @@ import Next from '../../../icons/Next'
 
 type Props = {
   paused: boolean
-  play: (o: boolean) => void
+  play: () => void
   increment: () => void
   decrement: () => void
 }
@@ -14,17 +14,22 @@ const CarouselControls = ({ paused, play, increment, decrement }: Props) => (
   <div>
     <button
       aria-controls="carousel-items"
-      aria-label="Previous"
+      aria-label="Previous slide"
       onClick={() => decrement()}
     >
       <Previous />
     </button>
-    <button aria-label="Pause" onClick={() => play(paused)}>
+    <button
+      aria-label={
+        paused ? 'Start automatic slide show' : 'Stop automatic slide show'
+      }
+      onClick={() => play()}
+    >
       {paused ? <Play /> : <Pause />}
     </button>
     <button
       aria-controls="carousel-items"
-      aria-label="Next"
+      aria-label="Next slide"
       onClick={() => increment()}
     >
       <Next />

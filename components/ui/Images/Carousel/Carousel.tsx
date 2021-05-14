@@ -41,7 +41,7 @@ function Carousel({ label, carouselItems, interval = 3000 }: Props) {
         increment={increment}
         decrement={decrement}
       />
-      <CarouselItems items={carouselItems} step={step} />
+      <CarouselItems items={carouselItems} step={step} play={play} />
     </section>
   )
 }

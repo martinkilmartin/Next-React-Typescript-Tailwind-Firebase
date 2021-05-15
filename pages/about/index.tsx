@@ -1,12 +1,12 @@
 import Color from 'color'
 
 import { GetStaticProps } from 'next'
-import { CAROUSEL_ITEM } from '../interfaces/HTML'
-import { sampleCarouselData } from '../utils/sample-data'
+import { CAROUSEL_ITEM } from '../../interfaces/HTML'
+import { sampleCarouselData } from '../../utils/sample-data'
 
-import Layout from '../components/layouts/Layout'
-import HTMLHead from '../components/landmarks/HTMLHead'
-import Carousel from '../components/ui/Carousel/Carousel'
+import Layout from '../../components/layouts/Layout'
+import HTMLHead from '../../components/landmarks/HTMLHead'
+import Carousel from '../../components/ui/Carousel/Carousel'
 
 type Props = {
   baseURL: string

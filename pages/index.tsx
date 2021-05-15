@@ -4,6 +4,7 @@ import { GetStaticProps } from 'next'
 
 import Layout from '../components/layouts/Layout'
 import HTMLHead from '../components/landmarks/HTMLHead'
+import Banner from '../components/ui/Banner/Banner'
 import Hero from '../components/ui/Heroes/Hero'
 import Features from '../components/ui/Features/Features'
 
@@ -24,6 +25,7 @@ const IndexPage = ({ baseURL }: Props) => (
       maskIcon="/logo-dark.svg"
       maskIconColor={new Color('green')}
     />
+    <Banner />
     <Hero
       title="Faster and Easier than"
       highlighted="Shopify or Square"

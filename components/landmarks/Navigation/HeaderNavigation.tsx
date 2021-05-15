@@ -8,7 +8,6 @@ function HeaderNavigation() {
   const [open, setOpen] = useState(false)
   return (
     <nav
-      role="navigation"
       aria-label="Main"
       className="px-2 pt-2 space-y-1 sm:px-2 sm:pt-2 sm:pb-3 sm:space-y-1 sm:flex"
       id={MOBILE_MENU_ID}

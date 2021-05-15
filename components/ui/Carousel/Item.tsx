@@ -1,6 +1,6 @@
-import Picture from '../Picture/Picture'
+import Picture from '../Images/Picture/Picture'
 import Caption from './Caption'
-import { CAROUSEL_ITEM } from '../../../../interfaces/HTML'
+import { CAROUSEL_ITEM } from '../../../interfaces/HTML'
 
 type Props = {
   data: CAROUSEL_ITEM

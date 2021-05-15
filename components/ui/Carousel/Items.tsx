@@ -1,5 +1,5 @@
 import CarouselItem from './Item'
-import { CAROUSEL_ITEM } from '../../../../interfaces/HTML'
+import { CAROUSEL_ITEM } from '../../../interfaces/HTML'
 
 type Props = {
   items: CAROUSEL_ITEM[]

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import CarouselControls from './Controls'
 import CarouselItems from './Items'
-import { CAROUSEL_ITEM } from '../../../../interfaces/HTML'
+import { CAROUSEL_ITEM } from '../../../interfaces/HTML'
 
 type Props = {
   label: string

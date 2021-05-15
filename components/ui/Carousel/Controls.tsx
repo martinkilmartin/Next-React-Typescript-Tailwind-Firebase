@@ -1,7 +1,7 @@
-import Pause from '../../../icons/Pause'
-import Play from '../../../icons/Play'
-import Previous from '../../../icons/Previous'
-import Next from '../../../icons/Next'
+import Pause from '../../icons/Pause'
+import Play from '../../icons/Play'
+import Previous from '../../icons/Previous'
+import Next from '../../icons/Next'
 
 type Props = {
   paused: boolean

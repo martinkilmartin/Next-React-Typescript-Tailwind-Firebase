@@ -6,7 +6,7 @@ import { sampleCarouselData } from '../utils/sample-data'
 
 import Layout from '../components/layouts/Layout'
 import HTMLHead from '../components/landmarks/HTMLHead'
-import Carousel from '../components/ui/Images/Carousel/Carousel'
+import Carousel from '../components/ui/Carousel/Carousel'
 
 type Props = {
   baseURL: string

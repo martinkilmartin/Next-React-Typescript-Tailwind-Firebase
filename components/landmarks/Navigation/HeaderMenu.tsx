@@ -17,7 +17,7 @@ function HeaderMenu({ open }: Props) {
             <NavigationLink
               href={link.path.toString()}
               ariaCurrent={
-                router.asPath === link.path.toString() ? 'page' : false
+                router.pathname === link.path.toString() ? 'page' : false
               }
               text={link.text}
             />

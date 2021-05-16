@@ -1,10 +1,11 @@
 {
   "hosting": {
     "public": "out",
+    "cleanUrls": true,
     "rewrites": [
       {
-        "source": "/about/**",
-        "destination": "/out/about.html"
+        "source": "/about",
+        "destination": "/about.html"
       }
     ],
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],

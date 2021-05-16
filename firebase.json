@@ -4,7 +4,7 @@
     "rewrites": [
       {
         "source": "/about/**",
-        "destination": "/about.html"
+        "destination": "/out/about.html"
       }
     ],
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],

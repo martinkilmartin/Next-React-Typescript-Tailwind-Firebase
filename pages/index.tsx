@@ -14,8 +14,8 @@ type Props = {
 const IndexPage = ({ baseURL }: Props) => (
   <Layout banner={true}>
     <HTMLHead
-      title="Welcome to Yoo.ie"
-      description="Easier and faster than Shopify. Quickly start selling online with User Interfaces and eCommerce Integrations from Yoo.ie."
+      title="Keep Discovering Ireland with Michael Cowell Irish Tours."
+      description="You’re invited to break, to discover new places, make new memories, and enjoy a well-deserved holiday"
       ogImage={`${baseURL}/img/xxl/conor-luddy-coliemore-harbour-dublin-ireland-2400w.jpg`}
       ogImageAlt="Conor Luddy's photo of Coliemore Harbour, Dublin."
       ogSiteName="YooIe"
@@ -25,9 +25,13 @@ const IndexPage = ({ baseURL }: Props) => (
       maskIconColor={new Color('green')}
     />
     <Hero
-      title="Faster and Easier than"
-      highlighted="Shopify or Square"
-      speel="Quickly start selling online with User Interfaces and eCommerce Integrations from Yoo.ie."
+      title="Fun &amp; Exploration"
+      highlighted="Reset &amp; Re-connect"
+      speel={
+        <span>
+          Discovering Begins <u>Here</u> with Michael Cowell Irish Tours.
+        </span>
+      }
     />
     <Features />
   </Layout>

@@ -1,5 +1,5 @@
 type Props = {
-  speel: string
+  speel: string | JSX.Element
 }
 
 const Speel = ({ speel }: Props) => (

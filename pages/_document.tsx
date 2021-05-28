@@ -15,7 +15,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
+      <Html data-theme="retro" lang="en">
         <Head />
         <body>
           <a href="#main" className="sr-only focus:not-sr-only">

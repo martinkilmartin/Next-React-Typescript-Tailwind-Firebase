@@ -1055,6 +1055,11 @@ cwebp-bin@^5.0.0:
     bin-wrapper "^4.0.1"
     logalot "^2.1.0"
 
+daisyui@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/daisyui/-/daisyui-1.2.0.tgz#058364908b0f333db2abba0f9c74a0be09facd46"
+  integrity sha512-Gy/4HaVVjCmBdRi7dfCDRpIxLKnM43zWOxbutY1unlaiJftrTYFs+P4miqpqWHRboPZ9lr1C5a7A4R1Er9+x+g==
+
 data-uri-to-buffer@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/data-uri-to-buffer/-/data-uri-to-buffer-3.0.1.tgz#594b8973938c5bc2c33046535785341abc4f3636"
@@ -4094,6 +4099,11 @@ tempfile@^2.0.0:
   dependencies:
     temp-dir "^1.0.0"
     uuid "^3.0.1"
+
+theme-change@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/theme-change/-/theme-change-2.0.2.tgz#142aa0669fde5ca7e625f5d3c09074ebb5bdb374"
+  integrity sha512-YvQqavf8nlGB3J7PdO0zLLhSLlgYhrqZL6By3FuzFIlWBsPTSPG/V98cHJllK3mmU97Jecei8XYiHalhy2umUw==
 
 through@^2.3.8:
   version "2.3.8"

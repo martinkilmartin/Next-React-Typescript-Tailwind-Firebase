@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import NavigationLink from './NavigationLink'
 import SearchInput from '../../ui/Inputs/SearchInput'
+import ThemeChange from '../../ui/DropDownSelects/ThemeChange'
 import { HEADER_LINKS } from '../../../constants/links'
 
 type Props = {
@@ -25,6 +26,9 @@ function HeaderMenu({ open }: Props) {
         ))}
         <li role="none" className="p-4">
           <SearchInput />
+        </li>
+        <li role="none" className="p-4">
+          <ThemeChange />
         </li>
       </ul>
     </div>

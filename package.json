@@ -14,9 +14,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "daisyui": "^1.2.0",
     "next": "latest",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "theme-change": "^2.0.2"
   },
   "devDependencies": {
     "@types/color": "^3.0.1",

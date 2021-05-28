@@ -1,12 +1,11 @@
 import Divider from './Divider'
 import Header from './Header'
 import Speel from './Speel'
-import DivButton from '../Buttons/DivButton'
 
 type Props = {
   title: string
   highlighted?: string
-  speel: string
+  speel: string | JSX.Element
 }
 
 const Hero = ({ title, highlighted, speel }: Props) => (
@@ -19,16 +18,8 @@ const Hero = ({ title, highlighted, speel }: Props) => (
             <Header title={title} highlighted={highlighted} />
             <Speel speel={speel} />
             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-              <DivButton
-                href="/about"
-                text="Start Now"
-                styles="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
-              />
-              <DivButton
-                href="/about"
-                text="Live Demo"
-                styles="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-indigo-700 bg-indigo-100 border border-transparent rounded-md hover:bg-indigo-200 md:py-4 md:text-lg md:px-10"
-              />
+              <button className="btn btn-primary">primary</button>
+              <button className="btn btn-secondary">secondary</button>
             </div>
           </div>
         </main>

@@ -9,7 +9,7 @@ function HeaderNavigation() {
   return (
     <nav
       aria-label="Main"
-      className="mb-2 shadow-lg navbar rounded-box"
+      className="mb-2 shadow-lg navbar rounded-box text-base-content"
       id={MOBILE_MENU_ID}
     >
       <Brand />

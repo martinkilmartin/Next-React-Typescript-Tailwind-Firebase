@@ -75,13 +75,13 @@ typings/
 .cache
 
 # imagemin output
-# public/img/lg/
-# public/img/md/
-# public/img/sm/
-# public/img/xl/
-# public/img/xs/
-# public/img/xxl/
-# public/img/xxs/
+public/img/lg/
+public/img/md/
+public/img/sm/
+public/img/xl/
+public/img/xs/
+public/img/xxl/
+public/img/xxs/
 # Next.js build output
 .next
 

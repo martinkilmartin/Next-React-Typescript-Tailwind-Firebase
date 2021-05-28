@@ -4,11 +4,13 @@ import Copyright from '../ui/Copyright'
 
 function Footer() {
   return (
-    <footer id="footer">
-      <FooterNavigation />
-      <Address />
-      <Copyright />
-    </footer>
+    <div className="text-base-content">
+      <footer id="footer">
+        <FooterNavigation />
+        <Address />
+        <Copyright />
+      </footer>
+    </div>
   )
 }
 export default Footer

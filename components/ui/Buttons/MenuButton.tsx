@@ -1,4 +1,4 @@
-import Open from '../../icons/ChevronDown'
+import Open from '../../icons/Menu'
 import Close from '../../icons/Close'
 
 type Props = {

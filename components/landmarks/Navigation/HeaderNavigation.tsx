@@ -9,10 +9,11 @@ function HeaderNavigation() {
   return (
     <nav
       aria-label="Main"
-      className="px-2 pt-2 space-y-1 sm:px-2 sm:pt-2 sm:pb-3 sm:space-y-1 sm:flex"
+      className="mb-2 shadow-lg navbar rounded-box"
       id={MOBILE_MENU_ID}
     >
       <Brand />
+      <span className="px-2 text-lg font-bold">Michael Cowell Irish Tours</span>
       <div className="relative inset-y-0 left-0 flex items-center sm:hidden">
         <MenuButton
           open={open}

@@ -14,6 +14,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.4.1",
     "daisyui": "^1.2.0",
     "next": "latest",
     "react": "^17.0.1",

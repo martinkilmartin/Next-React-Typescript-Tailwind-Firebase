@@ -6,12 +6,8 @@ type Props = {
 }
 
 const ImageBackground = ({ children, backgroundImage }: Props) => (
-  <div
-    className={
-      backgroundImage +
-      ' backdrop-opacity-0 relative bg-responsive bg-cover bg-no-repeat min-h-3/5'
-    }
-  >
+  <div className={backgroundImage + ' hero min-h-screen'}>
+    <div className="hero-overlay bg-opacity-60"></div>
     {children}
   </div>
 )

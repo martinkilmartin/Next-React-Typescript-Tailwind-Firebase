@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import NavigationLink from './NavigationLink'
-import SearchInput from '../../ui/Inputs/SearchInput'
 import ThemeChange from '../../ui/DropDownSelects/ThemeChange'
 import { HEADER_LINKS } from '../../../constants/links'
 
@@ -11,7 +10,11 @@ type Props = {
 function HeaderMenu({ open }: Props) {
   const router = useRouter()
   return (
-    <div className={open ? 'block' : 'hidden sm:block'}>
+    <div
+      className={
+        open ? 'block flex-1 px-2 mx-2' : 'hidden sm:block flex-1 px-2 mx-2'
+      }
+    >
       <ul role="menu" className="sm:flex sm:flex-row">
         {HEADER_LINKS.map((link, index) => (
           <li role="none" key={link.text + index} className="p-2 sm:p-4">
@@ -24,9 +27,6 @@ function HeaderMenu({ open }: Props) {
             />
           </li>
         ))}
-        <li role="none" className="p-4">
-          <SearchInput />
-        </li>
         <li role="none" className="p-4">
           <ThemeChange />
         </li>

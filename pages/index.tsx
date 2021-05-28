@@ -4,6 +4,7 @@ import { GetStaticProps } from 'next'
 
 import Layout from '../components/layouts/Layout'
 import HTMLHead from '../components/landmarks/HTMLHead'
+import ImageBackground from '../components/ui/Images/ImageBackground'
 import Hero from '../components/ui/Heroes/Hero'
 import Features from '../components/ui/Features/Features'
 
@@ -12,7 +13,7 @@ type Props = {
 }
 
 const IndexPage = ({ baseURL }: Props) => (
-  <Layout banner={true}>
+  <Layout banner={false}>
     <HTMLHead
       title="Welcome to Yoo.ie"
       description="Easier and faster than Shopify. Quickly start selling online with User Interfaces and eCommerce Integrations from Yoo.ie."
@@ -24,11 +25,13 @@ const IndexPage = ({ baseURL }: Props) => (
       maskIcon="/logo-dark.svg"
       maskIconColor={new Color('green')}
     />
-    <Hero
-      title="Faster and Easier than"
-      highlighted="Shopify or Square"
-      speel="Quickly start selling online with User Interfaces and eCommerce Integrations from Yoo.ie."
-    />
+    <ImageBackground backgroundImage="bg-doonagoreXS sm:bg-doonagoreSM md:bg-doonagoreMD lg:bg-doonagoreLG xl:bg-doonagoreXL 2xl:bg-doonagoreXXL">
+      <Hero
+        title="Faster and Easier than"
+        speel="Quickly start selling online with User Interfaces and eCommerce Integrations from Yoo.ie."
+        cta="Learn More"
+      />
+    </ImageBackground>
     <Features />
   </Layout>
 )

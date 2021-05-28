@@ -16,30 +16,32 @@ function Address() {
   const POSTCODE = process.env.NEXT_PUBLIC_COMPANY_ADDRESS_POSTCODE ?? null
   const COUNTRY = process.env.NEXT_PUBLIC_COMPANY_ADDRESS_COUNTRY ?? null
   return (
-    <address>
-      {EMAIL && <a href={`mailto:${EMAIL}`}>{EMAIL}</a>}
-      {EMAIL && <br />}
-      {PHONE && <a href={`tel:${PHONE}`}>{PHONE}</a>}
-      {PHONE && <br />}
-      {ADD_L1 && ADD_L1}
-      {ADD_L1 && <br />}
-      {ADD_L2 && ADD_L2}
-      {ADD_L2 && <br />}
-      {ADD_L3.trim()?.length && ADD_L3}
-      {ADD_L3.trim()?.length && <br />}
-      {VILLAGE && VILLAGE}
-      {VILLAGE && <br />}
-      {TOWN && TOWN}
-      {TOWN && <br />}
-      {COUNTY && COUNTY}
-      {COUNTY && <br />}
-      {CITY && CITY}
-      {CITY && <br />}
-      {POSTCODE && POSTCODE}
-      {POSTCODE && <br />}
-      {COUNTRY && COUNTRY}
-      {COUNTRY && <br />}
-    </address>
+    <div className="text-base-content">
+      <address>
+        {EMAIL && <a href={`mailto:${EMAIL}`}>{EMAIL}</a>}
+        {EMAIL && <br />}
+        {PHONE && <a href={`tel:${PHONE}`}>{PHONE}</a>}
+        {PHONE && <br />}
+        {ADD_L1 && ADD_L1}
+        {ADD_L1 && <br />}
+        {ADD_L2 && ADD_L2}
+        {ADD_L2 && <br />}
+        {ADD_L3.trim()?.length && ADD_L3}
+        {ADD_L3.trim()?.length && <br />}
+        {VILLAGE && VILLAGE}
+        {VILLAGE && <br />}
+        {TOWN && TOWN}
+        {TOWN && <br />}
+        {COUNTY && COUNTY}
+        {COUNTY && <br />}
+        {CITY && CITY}
+        {CITY && <br />}
+        {POSTCODE && POSTCODE}
+        {POSTCODE && <br />}
+        {COUNTRY && COUNTRY}
+        {COUNTRY && <br />}
+      </address>
+    </div>
   )
 }
 

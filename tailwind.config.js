@@ -12,33 +12,33 @@ module.exports = {
     extend: {
       backgroundImage: () => ({
         heroLandscapeXXL:
-          "url('/img/xxl/jordan-harrison-dame-lane-dublin-ireland-2400w.jpg')",
+          "url('/img/xxl/david-creedon-boating-fishing-gouganebarra-lake-gougane-forest-park-co-cork-ireland-2400w.jpg')",
         heroLandscapeXL:
-          "url('/img/xl/jordan-harrison-dame-lane-dublin-ireland-1920w.jpg')",
+          "url('/img/xl/david-creedon-boating-fishing-gouganebarra-lake-gougane-forest-park-co-cork-ireland-1920w.jpg')",
         heroLandscapeLG:
-          "url('/img/lg/jordan-harrison-dame-lane-dublin-ireland-1536w.jpg')",
+          "url('/img/lg/david-creedon-boating-fishing-gouganebarra-lake-gougane-forest-park-co-cork-ireland-1536w.jpg')",
         heroLandscapeMD:
-          "url('/img/md/jordan-harrison-dame-lane-dublin-ireland-1280w.jpg')",
+          "url('/img/md/david-creedon-boating-fishing-gouganebarra-lake-gougane-forest-park-co-cork-ireland-1280w.jpg')",
         heroLandscapeSM:
-          "url('/img/sm/jordan-harrison-dame-lane-dublin-ireland-800w.jpg')",
+          "url('/img/sm/david-creedon-boating-fishing-gouganebarra-lake-gougane-forest-park-co-cork-ireland-800w.jpg')",
         heroLandscapeXS:
-          "url('/img/xs/jordan-harrison-dame-lane-dublin-ireland-500w.jpg')",
+          "url('/img/xs/david-creedon-boating-fishing-gouganebarra-lake-gougane-forest-park-co-cork-ireland-500w.jpg')",
         heroLandscapeXXS:
-          "url('/img/xxs/jordan-harrison-dame-lane-dublin-ireland-300w.jpg')",
+          "url('/img/xxs/david-creedon-boating-fishing-gouganebarra-lake-gougane-forest-park-co-cork-ireland-300w.jpg')",
         heroPortraitXXL:
-          "url('/img/xxl/jordan-harrison-dame-lane-dublin-ireland-2400w.jpg')",
+          "url('/img/xxl/chris-hill-currach-boat-gouganebarra-lake-st-finbarrs-oratory-gougane-barra-co-cork-ireland-2400w.jpg')",
         heroPortraitXL:
-          "url('/img/xl/jordan-harrison-dame-lane-dublin-ireland-1920w.jpg')",
+          "url('/img/xl/chris-hill-currach-boat-gouganebarra-lake-st-finbarrs-oratory-gougane-barra-co-cork-ireland-1920w.jpg')",
         heroPortraitLG:
-          "url('/img/lg/jordan-harrison-dame-lane-dublin-ireland-1536w.jpg')",
+          "url('/img/lg/chris-hill-currach-boat-gouganebarra-lake-st-finbarrs-oratory-gougane-barra-co-cork-ireland-1536w.jpg')",
         heroPortraitMD:
-          "url('/img/md/jordan-harrison-dame-lane-dublin-ireland-1280w.jpg')",
+          "url('/img/md/chris-hill-currach-boat-gouganebarra-lake-st-finbarrs-oratory-gougane-barra-co-cork-ireland-1280w.jpg')",
         heroPortraitSM:
-          "url('/img/sm/jordan-harrison-dame-lane-dublin-ireland-800w.jpg')",
+          "url('/img/sm/chris-hill-currach-boat-gouganebarra-lake-st-finbarrs-oratory-gougane-barra-co-cork-ireland-800w.jpg')",
         heroPortraitXS:
-          "url('/img/xs/jordan-harrison-dame-lane-dublin-ireland-500w.jpg')",
+          "url('/img/xs/chris-hill-currach-boat-gouganebarra-lake-st-finbarrs-oratory-gougane-barra-co-cork-ireland-500w.jpg')",
         heroPortraitXXS:
-          "url('/img/xxs/jordan-harrison-dame-lane-dublin-ireland-300w.jpg')",
+          "url('/img/xxs/chris-hill-currach-boat-gouganebarra-lake-st-finbarrs-oratory-gougane-barra-co-cork-ireland-300w.jpg')",
       }),
       minHeight: {
         0: '0',

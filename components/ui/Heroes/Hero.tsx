@@ -2,7 +2,6 @@ type Props = {
   title: string
   highlighted?: string
   speel: string | JSX.Element
-  cta?: string
 }
 
 const Hero = ({ title, highlighted, speel, cta }: Props) => (

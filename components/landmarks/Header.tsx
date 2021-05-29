@@ -1,8 +1,12 @@
 import HeaderNavigation from './Navigation/HeaderNavigation'
 
-const Header = () => (
+type Props = {
+  brandName?: string
+}
+
+const Header = ({ brandName }: Props) => (
   <header>
-    <HeaderNavigation />
+    <HeaderNavigation brandName={brandName} />
   </header>
 )
 

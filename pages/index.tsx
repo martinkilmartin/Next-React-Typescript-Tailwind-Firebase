@@ -3,7 +3,6 @@ import Color from 'color'
 import { GetStaticProps } from 'next'
 
 import Layout from '../components/layouts/Layout'
-import ImageBackground from '../components/ui/Images/ImageBackground'
 import HTMLHead from '../components/landmarks/HTMLHead'
 import Hero from '../components/ui/Heroes/Hero'
 import Features from '../components/ui/Features/Features'
@@ -65,6 +64,7 @@ const IndexPage = ({
 export const getStaticProps: GetStaticProps = async () => {
   const baseURL: string = process.env.NEXT_PUBLIC_HOST ?? ''
   const title: string = process.env.NEXT_PUBLIC_HOME_TITLE ?? ''
+  const brandName: string = process.env.NEXT_PUBLIC_SITE_NAME ?? ''
   const description: string = process.env.NEXT_PUBLIC_HOME_DESCRIPTION ?? ''
   const ogImgSrc: string = process.env.NEXT_PUBLIC_HOME_OG_IMG_SRC ?? ''
   const ogImgAlt: string = process.env.NEXT_PUBLIC_HOME_OG_IMG_ALT ?? ''
@@ -82,6 +82,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       baseURL,
       title,
+      brandName,
       description,
       ogImgSrc,
       ogImgAlt,

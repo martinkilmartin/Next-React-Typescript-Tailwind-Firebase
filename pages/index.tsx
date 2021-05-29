@@ -40,24 +40,15 @@ const IndexPage = ({
 }: Props) => (
   <Layout banner={false} brandName={brandName}>
     <HTMLHead
-      title="Keep Discovering Ireland with Michael Cowell Irish Tours."
-      description="You’re invited to break, to discover new places, make new memories, and enjoy a well-deserved holiday"
-      ogImage={`${baseURL}/img/xxl/conor-luddy-coliemore-harbour-dublin-ireland-2400w.jpg`}
-      ogImageAlt="Conor Luddy's photo of Coliemore Harbour, Dublin."
-      ogSiteName="YooIe"
+      title={title}
+      description={description}
+      ogImage={`${baseURL}${ogImgSrc}`}
+      ogImageAlt={ogImgAlt}
+      ogSiteName={ogSiteName}
       ogURL={baseURL}
-      icon="/logo-dark.svg"
-      maskIcon="/logo-dark.svg"
-      maskIconColor={new Color('green')}
-    />
-    <Hero
-      title="Fun &amp; Exploration"
-      highlighted="Reset &amp; Re-connect"
-      speel={
-        <span>
-          Discovering Begins <u>Here</u> with Michael Cowell Irish Tours.
-        </span>
-      }
+      icon={icon}
+      maskIcon={maskIcon}
+      maskIconColor={new Color(maskIconColor)}
     />
     <div className="min-h-screen pt-16 overflow-hidden hero bg-gradient-to-br from-primary to-secondary text-primary-content">
       <Hero

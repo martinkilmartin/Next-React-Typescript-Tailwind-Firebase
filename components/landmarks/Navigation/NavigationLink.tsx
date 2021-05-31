@@ -10,7 +10,7 @@ type Props = {
 function NavigationLink({ href, ariaCurrent = false, text, icon }: Props) {
   return (
     <Link href={href}>
-      <a role="menuitem" aria-current={ariaCurrent}>
+      <a role="menuitem" aria-current={ariaCurrent} className="btn btn-link">
         {icon ? <i className={`fa fa-${icon}`}>{text}</i> : text}
       </a>
     </Link>

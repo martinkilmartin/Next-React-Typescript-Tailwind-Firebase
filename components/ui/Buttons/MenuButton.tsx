@@ -1,5 +1,5 @@
 import Open from '../../icons/Menu'
-import Close from '../../icons/Close'
+import Close from '../../icons/Cross'
 
 type Props = {
   ariaControl: string
@@ -14,16 +14,18 @@ const MenuButton = ({
   setOpen,
   sRMessage,
 }: Props) => (
-  <button
-    type="button"
-    className="items-center justify-center block p-2 text-gray-400 rounded-md sm:inline-flex hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-    aria-controls={ariaControl}
-    aria-expanded="false"
-    onClick={() => setOpen(!open)}
-  >
-    <span className="sr-only">{sRMessage}</span>
-    {open ? <Close /> : <Open />}
-  </button>
+  <div className="flex-none">
+    <button
+      type="button"
+      className="btn btn-square btn-primary"
+      aria-controls={ariaControl}
+      aria-expanded="false"
+      onClick={() => setOpen(!open)}
+    >
+      <span className="sr-only">{sRMessage}</span>
+      {open ? <Close /> : <Open />}
+    </button>
+  </div>
 )
 
 export default MenuButton

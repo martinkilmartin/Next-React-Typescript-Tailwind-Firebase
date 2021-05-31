@@ -1,3 +1,4 @@
+import Brand from '../ui/Brand'
 import HeaderNavigation from './Navigation/HeaderNavigation'
 
 type Props = {
@@ -6,7 +7,10 @@ type Props = {
 
 const Header = ({ brandName }: Props) => (
   <header>
-    <HeaderNavigation brandName={brandName} />
+    <div className="mb-2 shadow-lg navbar bg-neutral text-neutral-content rounded-box">
+      <Brand brandName={brandName} />
+      <HeaderNavigation />
+    </div>
   </header>
 )
 

@@ -14,7 +14,7 @@ const MenuButton = ({
   setOpen,
   sRMessage,
 }: Props) => (
-  <div className="flex-none">
+  <div className="flex-none sm:hidden">
     <button
       type="button"
       className="btn btn-square btn-primary"

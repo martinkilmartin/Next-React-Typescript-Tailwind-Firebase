@@ -27,7 +27,7 @@ function HeaderMenu({ open }: Props) {
             />
           </li>
         ))}
-        <li role="none" className="p-4">
+        <li role="none" className="p-2 sm:p-4">
           <ThemeChange />
         </li>
       </ul>

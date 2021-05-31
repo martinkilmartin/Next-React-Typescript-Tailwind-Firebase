@@ -3,7 +3,7 @@ import { ReactNode } from 'react'
 import Container from '../containers/Container'
 import Banner from '../ui/Banner/Banner'
 import Header from '../landmarks/Header'
-import Footer from '../landmarks/Footer'
+import Footer from '../landmarks/Footer/Footer'
 
 type Props = {
   banner?: boolean

@@ -1,4 +1,4 @@
-import { LINK } from '../interfaces/HTML'
+import { LINK, GROUP_LINKS } from '../interfaces/HTML'
 
 export const HEADER_LINKS: LINK[] = [
   {
@@ -95,5 +95,20 @@ export const LEGAL_LINKS: LINK[] = [
   {
     path: '/terms',
     text: 'Terms of Use',
+  },
+]
+
+export const FOOTER_LINKS: GROUP_LINKS[] = [
+  {
+    title: 'Company',
+    links: COMPANY_LINKS,
+  },
+  {
+    title: 'Socials',
+    links: SOCIAL_LINKS,
+  },
+  {
+    title: 'Legal',
+    links: LEGAL_LINKS,
   },
 ]

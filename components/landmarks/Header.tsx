@@ -7,7 +7,7 @@ type Props = {
 
 const Header = ({ brandName }: Props) => (
   <header>
-    <div className="mb-2 shadow-lg navbar bg-neutral text-neutral-content rounded-box">
+    <div className="mb-2 text-base shadow-lg navbar bg-base">
       <Brand brandName={brandName} />
       <HeaderNavigation />
     </div>

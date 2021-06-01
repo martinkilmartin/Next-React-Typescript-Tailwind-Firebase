@@ -14,18 +14,16 @@ const MenuButton = ({
   setOpen,
   sRMessage,
 }: Props) => (
-  <div className="flex-none sm:hidden">
-    <button
-      type="button"
-      className="btn btn-square btn-primary"
-      aria-controls={ariaControl}
-      aria-expanded="false"
-      onClick={() => setOpen(!open)}
-    >
-      <span className="sr-only">{sRMessage}</span>
-      {open ? <Close /> : <Open />}
-    </button>
-  </div>
+  <button
+    type="button"
+    className="ml-10 mr-0 btn btn-square btn-primary"
+    aria-controls={ariaControl}
+    aria-expanded="false"
+    onClick={() => setOpen(!open)}
+  >
+    <span className="sr-only">{sRMessage}</span>
+    {open ? <Close /> : <Open />}
+  </button>
 )
 
 export default MenuButton

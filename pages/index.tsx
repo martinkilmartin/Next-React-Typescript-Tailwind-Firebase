@@ -19,8 +19,8 @@ type Props = {
   maskIcon: string
   maskIconColor: string
   heroTitle: string
-  heroHighlighted: string
   speel: string
+  cta: string
 }
 
 const IndexPage = ({
@@ -35,8 +35,8 @@ const IndexPage = ({
   maskIcon,
   maskIconColor,
   heroTitle,
-  heroHighlighted,
   speel,
+  cta,
 }: Props) => (
   <Layout banner={false} brandName={brandName}>
     <HTMLHead
@@ -50,13 +50,12 @@ const IndexPage = ({
       maskIcon={maskIcon}
       maskIconColor={new Color(maskIconColor)}
     />
-    <div className="min-h-screen pt-16 overflow-hidden hero bg-gradient-to-br from-primary to-secondary text-primary-content">
-      <Hero
-        title={heroTitle}
-        highlighted={heroHighlighted}
-        speel={<span>{speel}</span>}
-      />
-    </div>
+    <Hero
+      backgroundImage="bg-doonagoreXS sm:bg-doonagoreSM md:bg-doonagoreMD lg:bg-doonagoreLG xl:bg-doonagoreXL 2xl:bg-doonagoreXXL"
+      title={heroTitle}
+      speel={<span>{speel}</span>}
+      cta={cta}
+    />
     <Features />
   </Layout>
 )
@@ -74,9 +73,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const maskIconColor: string =
     process.env.NEXT_PUBLIC_SITE_MASK_ICON_COLOR ?? ''
   const heroTitle: string = process.env.NEXT_PUBLIC_HOME_HERO_TITLE ?? ''
-  const heroHighlighted: string =
-    process.env.NEXT_PUBLIC_HOME_HERO_HIGHLIGHT ?? ''
   const speel: string = process.env.NEXT_PUBLIC_HOME_HERO_SPEEL ?? ''
+  const cta: string = process.env.NEXT_PUBLIC_HOME_HERO_CTA ?? ''
 
   return {
     props: {
@@ -91,8 +89,8 @@ export const getStaticProps: GetStaticProps = async () => {
       maskIcon,
       maskIconColor,
       heroTitle,
-      heroHighlighted,
       speel,
+      cta,
     },
   }
 }

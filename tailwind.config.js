@@ -7,7 +7,7 @@ module.exports = {
       center: true,
     },
     extend: {
-      backgroundImage: (theme) => ({
+      backgroundImage: () => ({
         doonagoreXXL:
           "url('/img/xxl/jordan-harrison-dame-lane-dublin-ireland-2400w.jpg')",
         doonagoreXL:

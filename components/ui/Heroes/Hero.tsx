@@ -1,26 +1,26 @@
 type Props = {
+  backgroundImage: string
   title: string
   highlighted?: string
   speel: string | JSX.Element
   cta?: string
 }
 
-const Hero = ({ title, highlighted, speel, cta }: Props) => (
-  <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
-    <article className="prose lg:prose-xl max-w-none">
-      <div className="text-center hero-content">
-        <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">
-            <span className="text-primary-content">{title}</span>
-            {highlighted && (
-              <span className="block text-secondary-content xl:inline">{` ${highlighted}`}</span>
-            )}
-          </h1>
-          <p className="mb-5 text-accent-content">{speel}</p>
-          {cta && <button className="btn btn-primary">{cta}</button>}
-        </div>
+const Hero = ({ backgroundImage, title, highlighted, speel, cta }: Props) => (
+  <div className={backgroundImage + ' min-h-screen hero '}>
+    <div className="hero-overlay bg-opacity-60"></div>
+    <div className="text-center hero-content text-neutral-content">
+      <div className="max-w-md">
+        <h1 className="mb-5 text-5xl font-bold">
+          {title}
+          {highlighted && (
+            <span className="block text-base-300 xl:inline">{` ${highlighted}`}</span>
+          )}
+        </h1>
+        <p className="mb-5">{speel}</p>
+        <button className="btn btn-primary">{cta}</button>
       </div>
-    </article>
+    </div>
   </div>
 )
 

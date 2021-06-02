@@ -7,7 +7,7 @@ type Props = {
 }
 
 const Hero = ({ backgroundImage, title, highlighted, speel, cta }: Props) => (
-  <div className={backgroundImage + ' min-h-screen hero '}>
+  <div className={backgroundImage + ' min-h-screen hero'}>
     <div className="hero-overlay bg-opacity-60"></div>
     <div className="text-center hero-content text-neutral-content">
       <div className="max-w-md">

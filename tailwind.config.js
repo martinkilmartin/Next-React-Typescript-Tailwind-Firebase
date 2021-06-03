@@ -5,6 +5,9 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      width: {
+        DEFAULT: '100%',
+      },
     },
     extend: {
       backgroundImage: () => ({

@@ -4,14 +4,10 @@ type Props = {
 }
 
 const Header = ({ title, highlighted }: Props) => (
-  <article className="prose">
-    <h1>
-      {title}
-      {highlighted && (
-        <span className="text-green-600">{` ${highlighted}`}</span>
-      )}
-    </h1>
-  </article>
+  <h1>
+    {title}
+    {highlighted && <span className="text-green-600">{` ${highlighted}`}</span>}
+  </h1>
 )
 
 export default Header

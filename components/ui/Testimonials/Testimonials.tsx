@@ -40,7 +40,10 @@ const Testimonials = () => (
     <div className="container px-5 py-24 mx-auto">
       <div className="flex flex-wrap -m-4">
         {testimonials.map((testimonial, index) => (
-          <div className="p-4 mb-6 text-center lg:w-1/3 lg:mb-0">
+          <div
+            className="p-4 mb-6 text-center lg:w-1/3 lg:mb-0"
+            key={`${hashCode(testimonial.testimonial)}-${index}`}
+          >
             <Image
               src={testimonial.imgSrc}
               alt={testimonial.imgAlt}

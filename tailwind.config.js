@@ -5,24 +5,55 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      width: {
+        DEFAULT: '100%',
+      },
     },
     extend: {
       backgroundImage: () => ({
-        doonagoreXXL:
+        heroLandscapeXXL:
           "url('/img/xxl/jordan-harrison-dame-lane-dublin-ireland-2400w.jpg')",
-        doonagoreXL:
+        heroLandscapeXL:
           "url('/img/xl/jordan-harrison-dame-lane-dublin-ireland-1920w.jpg')",
-        doonagoreLG:
+        heroLandscapeLG:
           "url('/img/lg/jordan-harrison-dame-lane-dublin-ireland-1536w.jpg')",
-        doonagoreMD:
+        heroLandscapeMD:
           "url('/img/md/jordan-harrison-dame-lane-dublin-ireland-1280w.jpg')",
-        doonagoreSM:
+        heroLandscapeSM:
           "url('/img/sm/jordan-harrison-dame-lane-dublin-ireland-800w.jpg')",
-        doonagoreXS:
+        heroLandscapeXS:
           "url('/img/xs/jordan-harrison-dame-lane-dublin-ireland-500w.jpg')",
-        doonagoreXXS:
+        heroLandscapeXXS:
+          "url('/img/xxs/jordan-harrison-dame-lane-dublin-ireland-300w.jpg')",
+        heroPortraitXXL:
+          "url('/img/xxl/jordan-harrison-dame-lane-dublin-ireland-2400w.jpg')",
+        heroPortraitXL:
+          "url('/img/xl/jordan-harrison-dame-lane-dublin-ireland-1920w.jpg')",
+        heroPortraitLG:
+          "url('/img/lg/jordan-harrison-dame-lane-dublin-ireland-1536w.jpg')",
+        heroPortraitMD:
+          "url('/img/md/jordan-harrison-dame-lane-dublin-ireland-1280w.jpg')",
+        heroPortraitSM:
+          "url('/img/sm/jordan-harrison-dame-lane-dublin-ireland-800w.jpg')",
+        heroPortraitXS:
+          "url('/img/xs/jordan-harrison-dame-lane-dublin-ireland-500w.jpg')",
+        heroPortraitXXS:
           "url('/img/xxs/jordan-harrison-dame-lane-dublin-ireland-300w.jpg')",
       }),
+      minHeight: {
+        0: '0',
+        '1/4': '25vh',
+        '2/5': '40vh',
+        '1/2': '50vh',
+        '3/5': '60vh',
+        '3/4': '75vh',
+        '9/10': '90vh',
+        full: '100%',
+      },
+      screens: {
+        landscape: { raw: '(orientation: landscape)' },
+        portrait: { raw: '(orientation: portrait)' },
+      },
       zIndex: {
         '-1': '-1',
         '-2': '-2',
@@ -34,16 +65,6 @@ module.exports = {
         '-8': '-8',
         '-9': '-9',
         '-10': '-10',
-      },
-      minHeight: {
-        0: '0',
-        '1/4': '25vh',
-        '2/5': '40vh',
-        '1/2': '50vh',
-        '3/5': '60vh',
-        '3/4': '75vh',
-        '9/10': '90vh',
-        full: '100%',
       },
     },
   },

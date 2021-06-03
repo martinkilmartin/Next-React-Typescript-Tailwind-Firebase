@@ -51,7 +51,7 @@ const IndexPage = ({
       maskIconColor={new Color(maskIconColor)}
     />
     <Hero
-      backgroundImage="bg-doonagoreXS sm:bg-doonagoreSM md:bg-doonagoreMD lg:bg-doonagoreLG xl:bg-doonagoreXL 2xl:bg-doonagoreXXL"
+      backgroundImage="portrait:bg-heroPortraitXS portrait:sm:bg-heroPortraitSM portrait:md:bg-heroPortraitMD portrait:lg:bg-heroPortraitLG portrait:xl:bg-heroPortraitXL portrait:2xl:bg-heroPortraitXXL landscape:bg-heroLandscapeXS landscape:sm:bg-heroLandscapeSM landscape:md:bg-heroLandscapeMD landscape:lg:bg-heroLandscapeLG landscape:xl:bg-heroLandscapeXL landscape:2xl:bg-heroLandscapeXXL"
       title={heroTitle}
       speel={<span>{speel}</span>}
       cta={cta}

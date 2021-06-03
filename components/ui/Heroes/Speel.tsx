@@ -3,9 +3,7 @@ type Props = {
 }
 
 const Speel = ({ speel }: Props) => (
-  <article className="prose lg:prose-xl">
-    <p>{speel}</p>
-  </article>
+  <p className="mb-5 prose lg:prose-xl">{speel}</p>
 )
 
 export default Speel

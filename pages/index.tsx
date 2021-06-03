@@ -6,6 +6,7 @@ import Layout from '../components/layouts/Layout'
 import HTMLHead from '../components/landmarks/HTMLHead'
 import Hero from '../components/ui/Heroes/Hero'
 import Features from '../components/ui/Features/Features'
+import Products from '../components/ui/Products/Products'
 
 type Props = {
   baseURL: string
@@ -57,6 +58,7 @@ const IndexPage = ({
       cta={cta}
     />
     <Features />
+    <Products />
   </Layout>
 )
 

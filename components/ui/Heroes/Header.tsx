@@ -4,9 +4,11 @@ type Props = {
 }
 
 const Header = ({ title, highlighted }: Props) => (
-  <h1>
+  <h1 className="mb-5 text-5xl font-bold prose">
     {title}
-    {highlighted && <span className="text-green-600">{` ${highlighted}`}</span>}
+    {highlighted && (
+      <span className="block text-base-300 xl:inline">{` ${highlighted}`}</span>
+    )}
   </h1>
 )
 

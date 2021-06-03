@@ -50,42 +50,46 @@ const products = [
 ]
 
 const Products = () => (
-  <div className="px-4 py-12 mx-auto md:flex md:justify-center max-w-7xl sm:px-6 lg:px-8">
-    {products.map((product, index) => (
-      <div
-        className="max-w-xs mx-auto overflow-hidden rounded-lg shadow-lg md:mx-1 bg-base-100"
-        key={`${product.title}-${index}`}
-      >
-        <Image
-          src={product.imgSrc}
-          alt={product.imgAlt}
-          width={product.imgWidth}
-          height={product.imgHeight}
-        />
-        <div className="px-4 py-2">
-          <h1 className="text-3xl font-bold uppercase text-base-content">
-            {product.title}
-          </h1>
-          {product.content.map((content) => (
-            <p
-              className="mt-1 text-sm text-base-content"
-              key={`${hashCode(content)}-${index}`}
-            >
-              {content}
-            </p>
-          ))}
-        </div>
-        <div className="flex items-center justify-between px-4 py-2 bg-primary">
-          <h1 className="text-lg font-bold text-neutral-content">
-            {product.price}
-          </h1>
-          <button className="px-2 py-1 text-xs font-semibold uppercase transition-colors duration-200 transform rounded text-neutral-content bg-accent hover:bg-secondary focus:bg-accent-focus focus:outline-none">
-            {product.cta}
-          </button>
-        </div>
+  <section className="text-base-content body-font">
+    <div className="container px-5 py-24 mx-auto">
+      <div className="flex flex-wrap justify-evenly">
+        {products.map((product, index) => (
+          <div
+            className="max-w-xs mx-auto overflow-hidden rounded-lg shadow-lg md:mx-1 bg-base-100"
+            key={`${product.title}-${index}`}
+          >
+            <Image
+              src={product.imgSrc}
+              alt={product.imgAlt}
+              width={product.imgWidth}
+              height={product.imgHeight}
+            />
+            <div className="px-4 py-2">
+              <h1 className="text-3xl font-bold uppercase text-base-content">
+                {product.title}
+              </h1>
+              {product.content.map((content) => (
+                <p
+                  className="mt-1 text-sm text-base-content"
+                  key={`${hashCode(content)}-${index}`}
+                >
+                  {content}
+                </p>
+              ))}
+            </div>
+            <div className="flex items-center justify-between px-4 py-2 bg-primary">
+              <h1 className="text-lg font-bold text-neutral-content">
+                {product.price}
+              </h1>
+              <button className="px-2 py-1 text-xs font-semibold uppercase transition-colors duration-200 transform rounded text-neutral-content bg-accent hover:bg-secondary focus:bg-accent-focus focus:outline-none">
+                {product.cta}
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
+    </div>
+  </section>
 )
 
 export default Products

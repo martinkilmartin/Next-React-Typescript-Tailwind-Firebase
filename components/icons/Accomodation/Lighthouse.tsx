@@ -1,8 +1,8 @@
 const Lighthouse = ({ ...props }) => {
   return (
     <svg height="58" viewBox="0 0 58 58" width="58" {...props}>
-      <g fill="none" fill-rule="evenodd">
-        <g fill-rule="nonzero">
+      <g fill="none" fillRule="evenodd">
+        <g fillRule="nonzero">
           <path d="m24 6h10v10h-10z" fill="#efc319" />
           <path d="m39 51-4-32-6-2-6 2-4 32 10 2z" fill="#ebeff0" />
           <path

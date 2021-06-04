@@ -15,7 +15,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html data-theme="light" lang="en">
+      <Html data-theme="emerald" lang="en">
         <Head />
         <body className="bg-base-100 dark:bg-neutral">
           <a href="#main" className="sr-only focus:not-sr-only">

@@ -1,8 +1,15 @@
 import Image from 'next/image'
 
+import { Testimonial } from '../../../interfaces'
+
 import { hashCode } from '../../../lib/hashing'
 
-const Testimonial = ({ testimonial, index }) => (
+type Props = {
+  testimonial: Testimonial
+  index: number
+}
+
+const Testimonial = ({ testimonial, index }: Props) => (
   <div
     className="p-4 mb-6 text-center lg:w-1/3 lg:mb-0"
     key={`${hashCode(testimonial.testimonial)}-${index}`}

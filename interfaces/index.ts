@@ -26,3 +26,13 @@ export type ImageType = {
   type: 'image/webp' | 'image/jpeg'
   suffix: '.webp' | '.jpg'
 }
+
+export type Testimonial = {
+  testimonial: string
+  author: string
+  location: string
+  imgSrc: string
+  imgAlt: string
+  imgWidth: number
+  imgHeight: number
+}

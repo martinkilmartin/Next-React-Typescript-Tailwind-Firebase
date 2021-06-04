@@ -5,27 +5,27 @@ import { HotPot } from '../../icons/Food'
 
 const features = [
   {
-    name: 'MAGIC MOMENTS',
+    name: 'Accommodation',
     description:
-      'Speed is an increasingly important ranking factor for Google Search and Ads',
+      'From camping, to 2 Star, 3 Star, 4, star 5, Star, thatched cottages, castle hotels, farmhouses, and (B/B) bed and breakfast houses, and even lighthouses, we have about ten of them, ultimately the decision it up to you, on this one, your tour guide will be happy to advise you on your needs and the wright hotel for your tour needs.',
     icon: Lighthouse,
   },
   {
-    name: 'JOYFUL DISCOVERY',
+    name: 'Coach Travelling',
     description:
-      'Walmart found that for every 1 second improvement in page load time, conversions increased by 2%.',
+      'While coach is not for everyone, in Ireland coach travel on tours is  an excellent standard, most coaches are equipped to a executive level, wifi, ac, fridge, DvD /cd, Toilet, 3 Point seatbelts, First aid, Fire Extinguish Equipment, Comfort stops for toilet breaks can and are often used to avoid the use of the coach toilet, traveling time from one attraction to another is part of the planning of your tour guide, who in any event would have your overall comfort In mind on that day traveling.',
     icon: Bus,
   },
   {
-    name: 'EPIC LAND',
+    name: 'Attractions',
     description:
-      'One billion people around the world utilize accessibility features to navigate the internet.',
+      'Typically all attractions are pre-booked before the tour starts. If you are not sure of the attraction you wish to see, ask your Tour Guide, as they can give you informed information, regarding time and distance involving your tour.',
     icon: Pamphlet,
   },
   {
-    name: 'SENSORY, HUMAN, FRESH',
+    name: 'Food',
     description:
-      'Continuous integration  and continuous delivery means your website will always stay fast anf fresh.',
+      'Overall food in Ireland is of very high standard, all food service personal attend course in Cooking, Storage, food handling and Foods service, cooking time and temperatures, display of cool food, and personal hygiene, and that of the general work area, Water is fine to drink or brush your teeth, but you may still boil your hotel water. As long as you feel safe, and happy.',
     icon: HotPot,
   },
 ]
@@ -33,12 +33,14 @@ const features = [
 const Features = () => (
   <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 text-base-content">
     <div className="prose prose-xl text-center max-w-none">
-      <h2>eCommerce</h2>
-      <h3>A better way to get online</h3>
+      <h2>Why Choose MCT Irish Tours?</h2>
+      <h3>Touring Ireland is second nature for us.</h3>
       <p>
-        You.ie takes all the hassle and jargon out of launching and maintaining
-        your online business presence. Always fast, always up-to-date, You.ie
-        takes cares of your online presence so you don't have to.
+        Our tour planning department will happily plan, book, and coordinate all
+        tour plans, from airport transfers to coach hire and tour guide booking,
+        hotel bookings, restaurant &amp; attractions, all your requirements in
+        one complete itinerary from your arrival in Ireland until your
+        departure.
       </p>
     </div>
     <div className="mt-10">
@@ -47,7 +49,7 @@ const Features = () => (
           <div key={feature.name} className="relative">
             <dt>
               <feature.icon className="float-left w-12 h-12 py-2 mr-2 rounded-xl lg:w-24 lg:h-24 ring ring-primary ring-offset-base-100 ring-offset-4" />
-              <p className="ml-16 text-lg font-medium leading-6 lg:ml-32">
+              <p className="px-2 ml-16 text-lg font-medium leading-6 lg:ml-32 text-primary-content bg-primary rounded-2xl">
                 {feature.name}
               </p>
             </dt>

@@ -3,18 +3,12 @@ import Image from 'next/image'
 import Avatar from '../../ui/Avatars/Avatar'
 import { Testimonial } from '../../../interfaces'
 
-import { hashCode } from '../../../lib/hashing'
-
 type Props = {
   testimonial: Testimonial
-  index: number
 }
 
-const TestimonialA = ({ testimonial, index }: Props) => (
-  <div
-    className="p-4 mb-6 text-center lg:w-1/3 lg:mb-0"
-    key={`${hashCode(testimonial.testimonial)}-${index}`}
-  >
+const TestimonialA = ({ testimonial }: Props) => (
+  <div className="p-4 mb-6 text-center lg:w-1/3 lg:mb-0">
     <Avatar
       image={
         <Image

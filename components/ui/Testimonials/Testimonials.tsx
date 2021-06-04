@@ -42,7 +42,7 @@ const Testimonials = () => (
       </div>
       <div className="flex flex-wrap -m-4">
         {testimonials.map((testimonial, index) => (
-          <TestimonialA testimonial={testimonial} index={index} />
+          <TestimonialA testimonial={testimonial} key={index} />
         ))}
       </div>
     </div>

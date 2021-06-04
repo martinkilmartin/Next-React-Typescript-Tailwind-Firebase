@@ -9,7 +9,7 @@ type Props = {
   index: number
 }
 
-const Testimonial = ({ testimonial, index }: Props) => (
+const TestimonialA = ({ testimonial, index }: Props) => (
   <div
     className="p-4 mb-6 text-center lg:w-1/3 lg:mb-0"
     key={`${hashCode(testimonial.testimonial)}-${index}`}
@@ -29,4 +29,4 @@ const Testimonial = ({ testimonial, index }: Props) => (
   </div>
 )
 
-export default Testimonial
+export default TestimonialA

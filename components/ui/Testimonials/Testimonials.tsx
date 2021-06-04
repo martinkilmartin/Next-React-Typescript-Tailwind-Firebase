@@ -1,4 +1,4 @@
-import Testimonial from './Testimonial'
+import TestimonialA from './TestimonialA'
 
 const testimonials = [
   {
@@ -42,7 +42,7 @@ const Testimonials = () => (
       </div>
       <div className="flex flex-wrap -m-4">
         {testimonials.map((testimonial, index) => (
-          <Testimonial testimonial={testimonial} index={index} />
+          <TestimonialA testimonial={testimonial} index={index} />
         ))}
       </div>
     </div>

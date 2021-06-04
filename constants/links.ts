@@ -6,46 +6,30 @@ export const HEADER_LINKS: LINK[] = [
     text: 'Home',
   },
   {
-    path: '/about',
-    text: 'About',
-  },
-  {
-    path: '/blog',
-    text: 'Blog',
-  },
-  {
-    path: '/contact',
-    text: 'Contact',
-  },
-  {
-    path: '/products',
-    text: 'Products',
-  },
-  {
-    path: '/services',
-    text: 'Services',
+    path: '/photos',
+    text: 'Photos',
   },
 ]
 
 export const COMPANY_LINKS: LINK[] = [
   {
-    path: '/about',
+    path: '#',
     text: 'About Us',
   },
   {
-    path: '/blog',
+    path: '#',
     text: 'Blog',
   },
   {
-    path: '/careers',
+    path: '#',
     text: 'Careers',
   },
   {
-    path: '/media',
+    path: '#',
     text: 'Media Kit',
   },
   {
-    path: '/news',
+    path: '#',
     text: 'News',
   },
 ]
@@ -85,15 +69,15 @@ export const SOCIAL_LINKS: LINK[] = [
 
 export const LEGAL_LINKS: LINK[] = [
   {
-    path: '/cookies',
+    path: '#',
     text: 'Cookie Policy',
   },
   {
-    path: '/privacy',
+    path: '#',
     text: 'Privacy Policy',
   },
   {
-    path: '/terms',
+    path: '#',
     text: 'Terms of Use',
   },
 ]

@@ -4,7 +4,7 @@ type Props = {
 
 const Avatar = ({ image }: Props) => (
   <div className="avatar">
-    <div className="w-10 h-10 mb-8 rounded-full sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-36 xl:h-36 2xl:w-48 2xl:h-48 ring ring-primary ring-offset-base-100 ring-offset-2">
+    <div className="w-20 h-20 mb-8 rounded-full sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36 2xl:w-48 2xl:h-48 ring ring-primary ring-offset-base-100 ring-offset-2">
       {image}
     </div>
   </div>

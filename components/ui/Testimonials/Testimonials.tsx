@@ -1,7 +1,3 @@
-import Image from 'next/image'
-
-import { hashCode } from '../../../lib/hashing'
-
 import Testimonial from './Testimonial'
 
 const testimonials = [

@@ -47,7 +47,7 @@ const Features = () => (
           <div key={feature.name} className="relative">
             <dt>
               <feature.icon className="float-left w-12 h-12 py-2 mr-2 rounded-xl lg:w-24 lg:h-24 ring ring-primary ring-offset-base-100 ring-offset-4" />
-              <p className="ml-16 text-lg font-medium leading-6 lg:ml-32">
+              <p className="px-2 ml-16 text-lg font-medium leading-6 lg:ml-32 text-primary-content bg-primary rounded-2xl">
                 {feature.name}
               </p>
             </dt>

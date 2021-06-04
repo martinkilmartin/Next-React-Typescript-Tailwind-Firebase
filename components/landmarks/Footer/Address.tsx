@@ -17,6 +17,9 @@ function Address() {
   const COUNTRY = process.env.NEXT_PUBLIC_COMPANY_ADDRESS_COUNTRY ?? null
   return (
     <div className="text-base-content">
+      <h2 className="mb-3 text-sm font-medium tracking-widest title-font text-base-content">
+        Contact
+      </h2>
       <address>
         {EMAIL && <a href={`mailto:${EMAIL}`}>{EMAIL}</a>}
         {EMAIL && <br />}

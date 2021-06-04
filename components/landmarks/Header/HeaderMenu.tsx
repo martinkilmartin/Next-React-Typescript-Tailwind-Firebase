@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import NavigationLink from './NavigationLink'
+import NavigationLink from '../Navigation/NavigationLink'
 import ThemeChange from '../../ui/DropDownSelects/ThemeChange'
 import { HEADER_LINKS } from '../../../constants/links'
 

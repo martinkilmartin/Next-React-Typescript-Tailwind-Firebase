@@ -1,4 +1,4 @@
-import HeaderNavigation from './Navigation/HeaderNavigation'
+import HeaderNavigation from './HeaderNavigation'
 
 type Props = {
   brandName?: string

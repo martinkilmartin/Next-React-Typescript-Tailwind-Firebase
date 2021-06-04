@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import NavigationLink from './NavigationLink'
+import NavigationLink from '../Navigation/NavigationLink'
 import { FOOTER_LINKS } from '../../../constants/links'
 
 function FooterNavigation() {
@@ -11,7 +11,7 @@ function FooterNavigation() {
           className="px-4 lg:w-1/4 md:w-1/2 sm:w-3/12"
           key={link.title + index}
         >
-          <h2 className="mb-3 text-sm font-medium tracking-widest title-font text-base-content">
+          <h2 className="mb-3 text-lg font-medium tracking-widest title-font text-base-content">
             {link.title}
           </h2>
           <ul role="menu" className="mb-10 list-none">

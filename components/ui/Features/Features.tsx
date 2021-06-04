@@ -1,32 +1,32 @@
-import CreditCard from '../../icons/CreditCard'
-import Bag from '../../icons/Bag'
-import Heart from '../../icons/Heart'
-import Moon from '../../icons/Moon'
+import { Lighthouse } from '../../icons/Accomodation'
+import { Bus } from '../../icons/Travel'
+import { Pamphlet } from '../../icons/Travel'
+import { HotPot } from '../../icons/Food'
 
 const features = [
   {
     name: 'Make every click count',
     description:
       'Speed is an increasingly important ranking factor for Google Search and Ads',
-    icon: CreditCard,
+    icon: Lighthouse,
   },
   {
     name: 'Increase conversions',
     description:
       'Walmart found that for every 1 second improvement in page load time, conversions increased by 2%.',
-    icon: Bag,
+    icon: Bus,
   },
   {
     name: 'Full Web Accessibility',
     description:
       'One billion people around the world utilize accessibility features to navigate the internet.',
-    icon: Heart,
+    icon: Pamphlet,
   },
   {
     name: 'Web Standards',
     description:
       'Continuous integration  and continuous delivery means your website will always stay fast anf fresh.',
-    icon: Moon,
+    icon: HotPot,
   },
 ]
 
@@ -46,14 +46,14 @@ const Features = () => (
         {features.map((feature) => (
           <div key={feature.name} className="relative">
             <dt>
-              <div className="absolute flex items-center justify-center w-12 h-12 rounded-md bg-primary">
-                <feature.icon className="w-6 h-6" aria-hidden="true" />
-              </div>
-              <p className="ml-16 text-lg font-medium leading-6">
+              <feature.icon className="float-left w-12 h-12 py-2 mr-2 rounded-xl lg:w-24 lg:h-24 ring ring-primary ring-offset-base-100 ring-offset-4" />
+              <p className="ml-16 text-lg font-medium leading-6 lg:ml-32">
                 {feature.name}
               </p>
             </dt>
-            <dd className="mt-2 ml-16 text-base">{feature.description}</dd>
+            <dd className="mt-2 ml-16 text-base lg:ml-32">
+              {feature.description}
+            </dd>
           </div>
         ))}
       </dl>

@@ -46,23 +46,7 @@ const Testimonials = () => (
       </div>
       <div className="flex flex-wrap -m-4">
         {testimonials.map((testimonial, index) => (
-          <div
-            className="p-4 mb-6 text-center lg:w-1/3 lg:mb-0"
-            key={`${hashCode(testimonial.testimonial)}-${index}`}
-          >
-            <Image
-              src={testimonial.imgSrc}
-              alt={testimonial.imgAlt}
-              width={testimonial.imgWidth}
-              height={testimonial.imgHeight}
-            />
-            <p className="leading-relaxed">{testimonial.testimonial}</p>
-            <span className="inline-block w-10 h-1 mt-6 mb-4 rounded bg-primary"></span>
-            <h2 className="text-sm font-medium tracking-wider text-base-content title-font">
-              {testimonial.author}
-            </h2>
-            <p className="text-base-content">{testimonial.location}</p>
-          </div>
+          <Testimonial testimonial={testimonial} index={index} />
         ))}
       </div>
     </div>

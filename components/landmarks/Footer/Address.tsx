@@ -16,7 +16,7 @@ function Address() {
   const POSTCODE = process.env.NEXT_PUBLIC_COMPANY_ADDRESS_POSTCODE ?? null
   const COUNTRY = process.env.NEXT_PUBLIC_COMPANY_ADDRESS_COUNTRY ?? null
   return (
-    <div className="text-base-content">
+    <div className="mb-12 text-base-content">
       <h2 className="mb-3 text-sm font-medium tracking-widest title-font text-base-content">
         Contact
       </h2>

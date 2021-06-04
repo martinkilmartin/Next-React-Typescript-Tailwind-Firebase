@@ -51,7 +51,11 @@ const products = [
 
 const Products = () => (
   <section className="text-base-content body-font">
-    <div className="container px-5 py-24 mx-auto">
+    <div className="container px-5 py-8 mx-auto">
+      <div className="prose prose-xl text-center max-w-none">
+        <h2>Customer Favourites</h2>
+        <h3>Our most popular tours</h3>
+      </div>
       <div className="flex flex-wrap justify-evenly">
         {products.map((product, index) => (
           <div
@@ -65,9 +69,9 @@ const Products = () => (
               height={product.imgHeight}
             />
             <div className="px-4 py-2">
-              <h1 className="text-3xl font-bold uppercase text-base-content">
+              <h2 className="text-3xl font-bold uppercase text-base-content">
                 {product.title}
-              </h1>
+              </h2>
               {product.content.map((content) => (
                 <p
                   className="mt-1 text-sm text-base-content"
@@ -78,9 +82,9 @@ const Products = () => (
               ))}
             </div>
             <div className="flex items-center justify-between px-4 py-2 bg-primary">
-              <h1 className="text-lg font-bold text-neutral-content">
+              <h3 className="text-lg font-bold text-neutral-content">
                 {product.price}
-              </h1>
+              </h3>
               <button className="px-2 py-1 text-xs font-semibold uppercase transition-colors duration-200 transform rounded text-neutral-content bg-accent hover:bg-secondary focus:bg-accent-focus focus:outline-none">
                 {product.cta}
               </button>

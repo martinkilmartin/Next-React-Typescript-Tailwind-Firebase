@@ -104,10 +104,6 @@ export const FOOTER_LINKS: GROUP_LINKS[] = [
     links: COMPANY_LINKS,
   },
   {
-    title: 'Socials',
-    links: SOCIAL_LINKS,
-  },
-  {
     title: 'Legal',
     links: LEGAL_LINKS,
   },

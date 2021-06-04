@@ -2,6 +2,8 @@ import Image from 'next/image'
 
 import { hashCode } from '../../../lib/hashing'
 
+import Testimonial from './Testimonial'
+
 const testimonials = [
   {
     testimonial:
@@ -37,7 +39,11 @@ const testimonials = [
 
 const Testimonials = () => (
   <section className="text-base-content body-font">
-    <div className="container px-5 py-24 mx-auto">
+    <div className="container px-5 py-8 mx-auto">
+      <div className="prose prose-xl text-center max-w-none">
+        <h2>Reviews</h2>
+        <h3>What our customers have to say</h3>
+      </div>
       <div className="flex flex-wrap -m-4">
         {testimonials.map((testimonial, index) => (
           <div

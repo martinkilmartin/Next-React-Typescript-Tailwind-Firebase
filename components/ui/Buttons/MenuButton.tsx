@@ -19,6 +19,7 @@ const MenuButton = ({
     className="ml-10 mr-0 btn btn-square btn-primary"
     aria-controls={ariaControl}
     aria-expanded="false"
+    aria-label="toggle menu"
     onClick={() => setOpen(!open)}
   >
     <span className="sr-only">{sRMessage}</span>

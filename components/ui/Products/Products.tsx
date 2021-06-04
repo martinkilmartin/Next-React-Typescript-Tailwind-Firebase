@@ -59,7 +59,7 @@ const Products = () => (
       <div className="flex flex-wrap justify-evenly">
         {products.map((product, index) => (
           <div
-            className="max-w-xs mx-auto overflow-hidden rounded-lg shadow-lg md:mx-1 bg-base-100"
+            className="max-w-xs mx-auto mb-4 overflow-hidden rounded-lg shadow-lg md:mb-0 md:mx-0 bg-base-100"
             key={`${product.title}-${index}`}
           >
             <Image

@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 import Container from '../containers/Container'
 import Banner from '../ui/Banner/Banner'
-import Header from '../landmarks/Header'
+import Header from '../landmarks/Header/Header'
 import Footer from '../landmarks/Footer/Footer'
 
 type Props = {

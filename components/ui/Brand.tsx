@@ -11,7 +11,9 @@ const Brand = ({
 }: Props) => (
   <>
     <img src={logo} alt={alt} width={64} height={64} />
-    {brandName && <span className="px-2 text-lg font-bold">{brandName}</span>}
+    {brandName && (
+      <span className="px-2 text-lg font-bold text-primary">{brandName}</span>
+    )}
   </>
 )
 

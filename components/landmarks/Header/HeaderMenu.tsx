@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import NavigationLink from './NavigationLink'
+import NavigationLink from '../Navigation/NavigationLink'
 import ThemeChange from '../../ui/DropDownSelects/ThemeChange'
 import { HEADER_LINKS } from '../../../constants/links'
 
@@ -12,10 +12,15 @@ function HeaderMenu({ open }: Props) {
   return (
     <div
       className={
-        open ? 'block flex-1 px-2 mx-2' : 'hidden sm:block flex-1 px-2 mx-2'
+        open
+          ? 'block w-full md:flex md:items-center md:justify-between'
+          : 'hidden sm:block w-full md:flex md:items-center md:justify-between'
       }
     >
-      <ul role="menu" className="sm:flex sm:flex-row">
+      <ul
+        role="menu"
+        className="flex flex-col px-2 py-3 -mx-4 md:flex-row md:mx-0 md:py-0"
+      >
         {HEADER_LINKS.map((link, index) => (
           <li role="none" key={link.text + index} className="p-2 sm:p-4">
             <NavigationLink
@@ -27,10 +32,10 @@ function HeaderMenu({ open }: Props) {
             />
           </li>
         ))}
-        <li role="none" className="p-2 sm:p-4">
-          <ThemeChange />
-        </li>
       </ul>
+      <div className="relative">
+        <ThemeChange />
+      </div>
     </div>
   )
 }

@@ -8,8 +8,8 @@ const testimonials = [
     location: 'Mumbai, India',
     imgSrc: '/img/profiles/yasmin.jpg',
     imgAlt: 'Yasmin Saikia wearing a shalwar kameez',
-    imgWidth: 300,
-    imgHeight: 300,
+    imgWidth: 1200,
+    imgHeight: 1200,
   },
   {
     testimonial:
@@ -18,8 +18,8 @@ const testimonials = [
     location: 'Beijing, China',
     imgSrc: '/img/profiles/manni.jpg',
     imgAlt: 'Manni Huang smiling for the camera',
-    imgWidth: 300,
-    imgHeight: 300,
+    imgWidth: 1200,
+    imgHeight: 1200,
   },
   {
     testimonial:
@@ -28,8 +28,8 @@ const testimonials = [
     location: 'San Diego, CA, USA',
     imgSrc: '/img/profiles/sandra.jpg',
     imgAlt: 'Sandra Spelling smiling for the camera',
-    imgWidth: 300,
-    imgHeight: 300,
+    imgWidth: 1200,
+    imgHeight: 1200,
   },
 ]
 

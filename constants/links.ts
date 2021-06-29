@@ -6,31 +6,31 @@ export const HEADER_LINKS: LINK[] = [
     text: 'Home',
   },
   {
-    path: '/photos',
-    text: 'Photos',
+    path: '/about',
+    text: 'About',
+  },
+  {
+    path: '/contact',
+    text: 'Contact',
+  },
+  {
+    path: '/gallery',
+    text: 'Gallery',
   },
 ]
 
 export const COMPANY_LINKS: LINK[] = [
   {
-    path: '#',
+    path: '/about',
     text: 'About Us',
   },
   {
-    path: '#',
-    text: 'Blog',
+    path: '/contact',
+    text: 'Contact Us',
   },
   {
-    path: '#',
-    text: 'Careers',
-  },
-  {
-    path: '#',
-    text: 'Media Kit',
-  },
-  {
-    path: '#',
-    text: 'News',
+    path: '/gallery',
+    text: 'Gallery',
   },
 ]
 

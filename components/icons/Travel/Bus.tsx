@@ -1,7 +1,7 @@
 const Bus = ({ ...props }) => {
   return (
     <svg
-      enable-background="new 0 0 50 50"
+      enableBackground="new 0 0 50 50"
       height="50"
       viewBox="0 0 50 50"
       width="50"

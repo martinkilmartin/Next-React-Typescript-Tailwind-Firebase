@@ -1,7 +1,7 @@
 const Pamphlet = ({ ...props }) => {
   return (
     <svg
-      enable-background="new 0 0 512 512"
+      enableBackground="new 0 0 512 512"
       height="512"
       viewBox="0 0 512 512"
       width="512"

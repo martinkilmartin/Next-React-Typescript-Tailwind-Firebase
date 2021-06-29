@@ -19,7 +19,7 @@ const About = ({
   ],
 }: Props) => (
   <div className="min-h-screen hero bg-base-200">
-    <div className="flex-col hero-content lg:flex-row-reverse">
+    <div className="flex-col hero-content">
       <h1 className="mb-5 text-5xl font-bold">{title}</h1>
       <div>
         {content.map((line: string, index: number) => (

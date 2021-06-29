@@ -4,13 +4,13 @@ import { GetStaticProps } from 'next'
 
 import Layout from '../../components/layouts/Layout'
 import HTMLHead from '../../components/landmarks/HTMLHead'
-import About from '../../components/ui/About/About'
+import Contact from '../../components/ui/Contact/Contact'
 
 type Props = {
   baseURL: string
 }
 
-const AboutPage = ({ baseURL }: Props) => (
+const ContactPage = ({ baseURL }: Props) => (
   <Layout>
     <HTMLHead
       title="Yoo.ie"
@@ -23,7 +23,7 @@ const AboutPage = ({ baseURL }: Props) => (
       maskIcon="/logo-dark.svg"
       maskIconColor={new Color('green')}
     />
-    <About />
+    <Contact />
   </Layout>
 )
 
@@ -32,4 +32,4 @@ export const getStaticProps: GetStaticProps = async () => {
   return { props: { baseURL } }
 }
 
-export default AboutPage
+export default ContactPage

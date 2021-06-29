@@ -10,21 +10,42 @@ import Carousel from '../../components/ui/Carousel/Carousel'
 
 type Props = {
   baseURL: string
+  title: string
+  brandName?: string
+  description: string
+  ogImgSrc: string
+  ogImgAlt: string
+  ogSiteName: string
+  icon: string
+  maskIcon: string
+  maskIconColor: string
   carouselItems: CAROUSEL_ITEM[]
 }
 
-const GalleryPage = ({ baseURL, carouselItems }: Props) => (
-  <Layout>
+const GalleryPage = ({
+  baseURL,
+  title,
+  brandName,
+  description,
+  ogImgSrc,
+  ogImgAlt,
+  ogSiteName,
+  icon,
+  maskIcon,
+  maskIconColor,
+  carouselItems,
+}: Props) => (
+  <Layout brandName={brandName}>
     <HTMLHead
-      title="Yoo.ie"
-      description="User Interfaces and eCommerce Integrations"
-      ogImage={`${baseURL}/img/xxl/conor-luddy-coliemore-harbour-dublin-ireland-2400w.jpg`}
-      ogImageAlt="Conor Luddy's photo of Coliemore Harbour, Dublin."
-      ogSiteName="YooIe"
+      title={title}
+      description={description}
+      ogImage={`${baseURL}${ogImgSrc}`}
+      ogImageAlt={ogImgAlt}
+      ogSiteName={ogSiteName}
       ogURL={baseURL}
-      icon="/logo-dark.svg"
-      maskIcon="/logo-dark.svg"
-      maskIconColor={new Color('green')}
+      icon={icon}
+      maskIcon={maskIcon}
+      maskIconColor={new Color(maskIconColor)}
     />
     <Carousel label="Test carousel" carouselItems={carouselItems} />
   </Layout>
@@ -32,8 +53,32 @@ const GalleryPage = ({ baseURL, carouselItems }: Props) => (
 
 export const getStaticProps: GetStaticProps = async () => {
   const baseURL: string = process.env.NEXT_PUBLIC_HOST ?? ''
+  const title: string = process.env.NEXT_PUBLIC_HOME_TITLE ?? ''
+  const brandName: string = process.env.NEXT_PUBLIC_SITE_NAME ?? ''
+  const description: string = process.env.NEXT_PUBLIC_HOME_DESCRIPTION ?? ''
+  const ogImgSrc: string = process.env.NEXT_PUBLIC_HOME_OG_IMG_SRC ?? ''
+  const ogImgAlt: string = process.env.NEXT_PUBLIC_HOME_OG_IMG_ALT ?? ''
+  const ogSiteName: string = process.env.NEXT_PUBLIC_SITE_NAME ?? ''
+  const icon: string = process.env.NEXT_PUBLIC_SITE_ICON ?? ''
+  const maskIcon: string = process.env.NEXT_PUBLIC_SITE_MASK_ICON ?? ''
+  const maskIconColor: string =
+    process.env.NEXT_PUBLIC_SITE_MASK_ICON_COLOR ?? ''
   const carouselItems: CAROUSEL_ITEM[] = sampleCarouselData
-  return { props: { baseURL, carouselItems } }
+  return {
+    props: {
+      baseURL,
+      title,
+      brandName,
+      description,
+      ogImgSrc,
+      ogImgAlt,
+      ogSiteName,
+      icon,
+      maskIcon,
+      maskIconColor,
+      carouselItems,
+    },
+  }
 }
 
 export default GalleryPage

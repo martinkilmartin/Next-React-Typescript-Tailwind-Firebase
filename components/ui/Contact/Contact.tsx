@@ -1,6 +1,6 @@
 const Contact = () => (
   <div className="min-h-screen hero bg-base-200">
-    <div className="flex-col hero-content lg:flex-row-reverse">
+    <div className="flex-col hero-content">
       <div className="text-center">
         <h1 className="my-3 text-3xl font-semibold text-base-content">
           Contact Us

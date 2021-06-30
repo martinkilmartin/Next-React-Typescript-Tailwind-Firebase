@@ -1,4 +1,8 @@
-function Address() {
+type Props = {
+  title?: boolean
+}
+
+function Address({ title = true }: Props) {
   const EMAIL = process.env.NEXT_PUBLIC_COMPANY_EMAIL ?? null
   const PHONE = process.env.NEXT_PUBLIC_COMPANY_PHONE ?? null
   const ADD_L1 = process.env.NEXT_PUBLIC_COMPANY_ADDRESS_LINE_1 ?? null
@@ -17,9 +21,11 @@ function Address() {
   const COUNTRY = process.env.NEXT_PUBLIC_COMPANY_ADDRESS_COUNTRY ?? null
   return (
     <div className="mb-12 text-base-content">
-      <h2 className="mb-3 text-lg font-medium tracking-widest title-font text-base-content">
-        Contact
-      </h2>
+      {title && (
+        <h2 className="mb-3 text-lg font-medium tracking-widest title-font text-base-content">
+          Contact
+        </h2>
+      )}
       <address>
         {EMAIL && <a href={`mailto:${EMAIL}`}>{EMAIL}</a>}
         {EMAIL && <br />}

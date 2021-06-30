@@ -17,6 +17,10 @@ export const HEADER_LINKS: LINK[] = [
     path: '/gallery',
     text: 'Gallery',
   },
+  {
+    path: '/tours',
+    text: 'Tours',
+  },
 ]
 
 export const COMPANY_LINKS: LINK[] = [

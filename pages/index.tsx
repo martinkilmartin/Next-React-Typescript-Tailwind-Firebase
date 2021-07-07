@@ -7,6 +7,7 @@ import HTMLHead from '../components/landmarks/HTMLHead'
 import Hero from '../components/ui/Heroes/Hero'
 import Features from '../components/ui/Features/Features'
 import Products from '../components/ui/Products/Products'
+import Offers from '../components/ui/Offers/Offers'
 import Testimonials from '../components/ui/Testimonials/Testimonials'
 
 type Props = {
@@ -60,6 +61,7 @@ const IndexPage = ({
     />
     <Features />
     <Products />
+    <Offers />
     <Testimonials />
   </Layout>
 )

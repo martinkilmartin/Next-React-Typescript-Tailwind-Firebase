@@ -27,6 +27,13 @@ export type ImageType = {
   suffix: '.webp' | '.jpg'
 }
 
+export type NextJSImage = {
+  src: string
+  alt: string
+  width: number
+  height: number
+}
+
 export type Testimonial = {
   testimonial: string
   author: string
@@ -35,4 +42,40 @@ export type Testimonial = {
   imgAlt: string
   imgWidth: number
   imgHeight: number
+}
+
+export type Product = {
+  img: NextJSImage
+  title: string
+  description: string[]
+  category: string
+  location: string
+  price: string
+  cta: string
+}
+
+export type Offer = {
+  img: NextJSImage
+  type: '%' | '€'
+  amount: number | null
+  codes: string[]
+  category:
+    | 'Accommodation'
+    | 'Getting around Ireland'
+    | 'Getting to Ireland'
+    | 'Golf'
+    | 'Luxury'
+    | 'Outdoor and wellness'
+    | 'Package holidays'
+    | 'Sustainable tourism'
+    | 'Things to do'
+  title: string
+  description: string
+  location: string
+  headline: string
+  assurances:
+    | 'Fully refundable'
+    | 'Partially refundable'
+    | 'Cancellable'
+    | 'Amendable'
 }

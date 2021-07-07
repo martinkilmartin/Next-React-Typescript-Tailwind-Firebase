@@ -1,4 +1,4 @@
-import { Product } from '../../../interfaces/Products/index'
+import { Product } from '../../../interfaces/index'
 import Image from 'next/image'
 
 type Props = {
@@ -10,20 +10,15 @@ const TourCard = ({ tour, index }: Props) => (
   <div className="px-2 m-2 text-center shadow-2xl card" key={index}>
     <figure className="px-10 pt-10">
       <Image
-        src={tour.imgSrc}
-        alt={tour.imgAlt}
-        width={tour.imgWidth}
-        height={tour.imgHeight}
+        src={tour.img.src}
+        alt={tour.img.alt}
+        width={tour.img.width}
+        height={tour.img.height}
         className="rounded-xl"
       />
     </figure>
     <div className="card-body">
-      <h2 className="card-title">
-        {tour.title}
-        {tour.offer && (
-          <div className="mx-2 badge badge-error">{tour.offer.type}</div>
-        )}
-      </h2>
+      <h2 className="card-title">{tour.title}</h2>
       {tour.description.map((desc, jndex) => (
         <p key={jndex}>{desc}</p>
       ))}

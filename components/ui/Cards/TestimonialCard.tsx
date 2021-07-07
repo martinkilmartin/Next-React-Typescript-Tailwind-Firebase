@@ -1,13 +1,13 @@
 import Image from 'next/image'
 
-import Avatar from '../../ui/Avatars/Avatar'
+import Avatar from '../Avatars/Avatar'
 import { Testimonial } from '../../../interfaces'
 
 type Props = {
   testimonial: Testimonial
 }
 
-const TestimonialA = ({ testimonial }: Props) => (
+const TestimonialCard = ({ testimonial }: Props) => (
   <div className="p-4 mb-6 text-center lg:w-1/3 lg:mb-0">
     <Avatar
       image={
@@ -28,4 +28,4 @@ const TestimonialA = ({ testimonial }: Props) => (
   </div>
 )
 
-export default TestimonialA
+export default TestimonialCard

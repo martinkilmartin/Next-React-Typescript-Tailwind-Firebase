@@ -1,4 +1,4 @@
-import { Product } from '../../../interfaces/Products/index'
+import { Product } from '../../../interfaces/index'
 import Image from 'next/image'
 
 type Props = {
@@ -12,10 +12,10 @@ const ProductCard = ({ product, index }: Props) => (
     key={`${product.title}-${index}`}
   >
     <Image
-      src={product.imgSrc}
-      alt={product.imgAlt}
-      width={product.imgWidth}
-      height={product.imgHeight}
+      src={product.img.src}
+      alt={product.img.alt}
+      width={product.img.width}
+      height={product.img.height}
     />
     <div className="px-4 py-2">
       <h2 className="text-3xl font-bold uppercase text-base-content">

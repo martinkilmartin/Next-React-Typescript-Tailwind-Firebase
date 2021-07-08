@@ -2,6 +2,7 @@ import { Offer } from '../interfaces/index'
 
 export const OFFERS: Offer[] = [
   {
+    id: 'offerOne',
     img: {
       src:
         '/img/originals/michael-skellig-michael-co-kerry-also-doubles-as-luke-skywalker-retreat-in-star-wars-ireland.jpg',
@@ -20,8 +21,10 @@ export const OFFERS: Offer[] = [
     location: 'Ireland',
     headline: 'Complimentary drink with dinner',
     assurances: 'Fully refundable',
+    cta: 'Book now',
   },
   {
+    id: 'offerTwo',
     img: {
       src:
         '/img/originals/michael-skellig-michael-co-kerry-also-doubles-as-luke-skywalker-retreat-in-star-wars-ireland.jpg',
@@ -40,8 +43,10 @@ export const OFFERS: Offer[] = [
     location: 'Ireland',
     headline: 'Complimentary drink with dinner',
     assurances: 'Fully refundable',
+    cta: 'Book now',
   },
   {
+    id: 'offerThree',
     img: {
       src:
         '/img/originals/michael-skellig-michael-co-kerry-also-doubles-as-luke-skywalker-retreat-in-star-wars-ireland.jpg',
@@ -60,5 +65,6 @@ export const OFFERS: Offer[] = [
     location: 'Ireland',
     headline: 'Complimentary drink with dinner',
     assurances: 'Fully refundable',
+    cta: 'Book now',
   },
 ]

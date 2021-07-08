@@ -2,6 +2,11 @@ import Color from 'color'
 
 import { GetStaticProps } from 'next'
 
+import { Product } from '../interfaces/index'
+import { PRODUCTS } from '../constants/products'
+import { Offer } from '../interfaces/index'
+import { OFFERS } from '../constants/offers'
+
 import Layout from '../components/layouts/Layout'
 import HTMLHead from '../components/landmarks/HTMLHead'
 import Hero from '../components/ui/Heroes/Hero'
@@ -24,6 +29,8 @@ type Props = {
   heroTitle: string
   speel: string
   cta: string
+  products: Product[]
+  offers: Offer[]
 }
 
 const IndexPage = ({
@@ -40,6 +47,8 @@ const IndexPage = ({
   heroTitle,
   speel,
   cta,
+  products,
+  offers,
 }: Props) => (
   <Layout banner={false} brandName={brandName}>
     <HTMLHead
@@ -60,8 +69,8 @@ const IndexPage = ({
       cta={cta}
     />
     <Features />
-    <Products />
-    <Offers />
+    <Products products={products} />
+    <Offers offers={offers} />
     <Testimonials />
   </Layout>
 )
@@ -81,6 +90,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const heroTitle: string = process.env.NEXT_PUBLIC_HOME_HERO_TITLE ?? ''
   const speel: string = process.env.NEXT_PUBLIC_HOME_HERO_SPEEL ?? ''
   const cta: string = process.env.NEXT_PUBLIC_HOME_HERO_CTA ?? ''
+  const products: Product[] = PRODUCTS
+  const offers: Offer[] = OFFERS
 
   return {
     props: {
@@ -97,6 +108,8 @@ export const getStaticProps: GetStaticProps = async () => {
       heroTitle,
       speel,
       cta,
+      products,
+      offers,
     },
   }
 }

@@ -3,14 +3,10 @@ import Image from 'next/image'
 
 type Props = {
   offer: Offer
-  index: number
 }
 
-const OfferCard = ({ offer, index }: Props) => (
-  <div
-    className="max-w-xs mx-auto mb-4 overflow-hidden shadow-lg card bordered md:mb-0 md:mx-0 bg-base-100"
-    key={`${offer.title}-${index}`}
-  >
+const OfferCard = ({ offer }: Props) => (
+  <div className="max-w-xs mx-auto mb-4 overflow-hidden shadow-lg card bordered md:mb-0 md:mx-0 bg-base-100">
     <figure>
       <Image
         src={offer.img.src}
@@ -21,16 +17,12 @@ const OfferCard = ({ offer, index }: Props) => (
     </figure>
     <div className="card-body">
       <h2 className="card-title">
-        Top image
-        <div className="mx-2 badge badge-primary">NEW</div>
+        {offer.title}
+        <div className="mx-2 badge badge-primary">{offer.category}</div>
       </h2>
-      <p>
-        Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit
-        necessitatibus veritatis sed molestiae voluptates incidunt iure
-        sapiente.
-      </p>
+      <p>{offer.description}</p>
       <div className="justify-end card-actions">
-        <button className="btn btn-primary">More info</button>
+        <button className="btn btn-primary">{offer.cta}</button>
       </div>
     </div>
   </div>

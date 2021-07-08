@@ -3,14 +3,10 @@ import Image from 'next/image'
 
 type Props = {
   product: Product
-  index: number
 }
 
-const ProductCard = ({ product, index }: Props) => (
-  <div
-    className="max-w-xs mx-auto mb-4 overflow-hidden rounded-lg shadow-lg md:mb-0 md:mx-0 bg-base-100"
-    key={`${product.title}-${index}`}
-  >
+const ProductCard = ({ product }: Props) => (
+  <div className="max-w-xs mx-auto mb-4 overflow-hidden rounded-lg shadow-lg md:mb-0 md:mx-0 bg-base-100">
     <Image
       src={product.img.src}
       alt={product.img.alt}
@@ -22,7 +18,10 @@ const ProductCard = ({ product, index }: Props) => (
         {product.title}
       </h2>
       {product.description.map((description) => (
-        <p className="mt-1 text-sm text-base-content" key={index}>
+        <p
+          className="mt-1 text-sm text-base-content"
+          key={description.substring(0, 12)}
+        >
           {description}
         </p>
       ))}

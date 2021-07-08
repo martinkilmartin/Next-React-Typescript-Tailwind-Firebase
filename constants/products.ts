@@ -2,6 +2,7 @@ import { Product } from '../interfaces/index'
 
 export const PRODUCTS: Product[] = [
   {
+    id: 'offerOne',
     img: {
       src:
         '/img/originals/brian-morrison-christ-church-cathedral-of-the-holy-trinity-dublin-ireland.jpg',
@@ -20,6 +21,7 @@ export const PRODUCTS: Product[] = [
     cta: 'Book',
   },
   {
+    id: 'offerTwo',
     img: {
       src:
         '/img/originals/brian-morrison-the-rock-of-cashel-of-the-kings-st-patricks-rock-county-tipperary-ireland.jpg',
@@ -39,6 +41,7 @@ export const PRODUCTS: Product[] = [
     cta: 'Book',
   },
   {
+    id: 'offerThree',
     img: {
       src:
         '/img/originals/brian-morrison-glendalough-glacial-valley-county-wicklow-ireland.jpg',
@@ -56,6 +59,7 @@ export const PRODUCTS: Product[] = [
     cta: 'Book',
   },
   {
+    id: 'offerFour',
     img: {
       src:
         '/img/originals/gareth-mccormack-kylemore-abbey-connemara-county-galway-ireland.jpg',
@@ -73,6 +77,7 @@ export const PRODUCTS: Product[] = [
     cta: 'Book',
   },
   {
+    id: 'offerFive',
     img: {
       src:
         '/img/originals/henrique-craveiro-cliffs-of-moher-co-clare-ireland.jpg',

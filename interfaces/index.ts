@@ -45,6 +45,7 @@ export type Testimonial = {
 }
 
 export type Product = {
+  id: string
   img: NextJSImage
   title: string
   description: string[]
@@ -55,6 +56,7 @@ export type Product = {
 }
 
 export type Offer = {
+  id: string
   img: NextJSImage
   type: '%' | '€'
   amount: number | null
@@ -78,4 +80,5 @@ export type Offer = {
     | 'Partially refundable'
     | 'Cancellable'
     | 'Amendable'
+  cta: string
 }

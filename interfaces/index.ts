@@ -82,3 +82,10 @@ export type Offer = {
     | 'Amendable'
   cta: string
 }
+
+export type Feature = {
+  name: string
+  description: string
+  icon?: string
+  img?: NextJSImage
+}

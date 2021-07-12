@@ -2,6 +2,8 @@ import Color from 'color'
 
 import { GetStaticProps } from 'next'
 
+import { Feature } from '../interfaces/index'
+import { FEATURES } from '../constants/features'
 import { Product } from '../interfaces/index'
 import { PRODUCTS } from '../constants/products'
 import { Offer } from '../interfaces/index'
@@ -27,8 +29,9 @@ type Props = {
   maskIcon: string
   maskIconColor: string
   heroTitle: string
-  speel: string
+  heroSpeel: string
   cta: string
+  features: Feature[]
   products: Product[]
   offers: Offer[]
 }
@@ -45,8 +48,9 @@ const IndexPage = ({
   maskIcon,
   maskIconColor,
   heroTitle,
-  speel,
+  heroSpeel,
   cta,
+  features,
   products,
   offers,
 }: Props) => (
@@ -65,10 +69,10 @@ const IndexPage = ({
     <Hero
       backgroundImage="portrait:bg-heroPortraitXS portrait:sm:bg-heroPortraitSM portrait:md:bg-heroPortraitMD portrait:lg:bg-heroPortraitLG portrait:xl:bg-heroPortraitXL portrait:2xl:bg-heroPortraitXXL landscape:bg-heroLandscapeXS landscape:sm:bg-heroLandscapeSM landscape:md:bg-heroLandscapeMD landscape:lg:bg-heroLandscapeLG landscape:xl:bg-heroLandscapeXL landscape:2xl:bg-heroLandscapeXXL"
       title={heroTitle}
-      speel={<span>{speel}</span>}
+      speel={<span>{heroSpeel}</span>}
       cta={cta}
     />
-    <Features />
+    <Features features={features} />
     <Products products={products} />
     <Offers offers={offers} />
     <Testimonials />
@@ -88,8 +92,13 @@ export const getStaticProps: GetStaticProps = async () => {
   const maskIconColor: string =
     process.env.NEXT_PUBLIC_SITE_MASK_ICON_COLOR ?? ''
   const heroTitle: string = process.env.NEXT_PUBLIC_HOME_HERO_TITLE ?? ''
-  const speel: string = process.env.NEXT_PUBLIC_HOME_HERO_SPEEL ?? ''
+  const heroSpeel: string = process.env.NEXT_PUBLIC_HOME_HERO_SPEEL ?? ''
   const cta: string = process.env.NEXT_PUBLIC_HOME_HERO_CTA ?? ''
+  const featuresTitle: string = process.env.NEXT_PUBLIC_FEATURES_TITLE ?? ''
+  const featuresSubTitle: string =
+    process.env.NEXT_PUBLIC_FEATURES_SUBTITLE ?? ''
+  const featuresSpeel: string = process.env.NEXT_PUBLIC_FEATURES_SPEEL ?? ''
+  const features: Feature[] = FEATURES
   const products: Product[] = PRODUCTS
   const offers: Offer[] = OFFERS
 
@@ -106,8 +115,12 @@ export const getStaticProps: GetStaticProps = async () => {
       maskIcon,
       maskIconColor,
       heroTitle,
-      speel,
+      heroSpeel,
       cta,
+      featuresTitle,
+      featuresSubTitle,
+      featuresSpeel,
+      features,
       products,
       offers,
     },

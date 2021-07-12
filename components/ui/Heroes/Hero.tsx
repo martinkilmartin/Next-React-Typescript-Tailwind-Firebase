@@ -13,7 +13,7 @@ const Hero = ({ backgroundImage, title, highlighted, speel, cta }: Props) => (
   <div className={backgroundImage + ' min-h-screen hero'}>
     <div className="hero-overlay bg-opacity-60"></div>
     <div className="text-center hero-content text-neutral-content">
-      <div className="max-w-md">
+      <div className="max-w-lg">
         <Header title={title} highlighted={highlighted} />
         <Speel speel={speel} />
         <button className="btn btn-primary">{cta}</button>

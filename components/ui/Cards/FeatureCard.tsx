@@ -6,21 +6,21 @@ type Props = {
 }
 
 const FeatureCard = ({ feature }: Props) => (
-  <div key={feature.name} className="relative">
-    <dt>
-      {feature.img && (
+  <div className="card lg:card-side bordered">
+    {feature.img && (
+      <figure>
         <Image
           src={feature.img.src}
           alt={feature.img.alt}
           width={feature.img.width}
           height={feature.img.height}
         />
-      )}
-      <p className="px-2 ml-16 text-lg font-medium leading-6 lg:ml-32 text-primary-content bg-primary rounded-2xl">
-        {feature.name}
-      </p>
-    </dt>
-    <dd className="mt-2 ml-16 text-base lg:ml-32">{feature.description}</dd>
+      </figure>
+    )}
+    <div className="card-body">
+      <h2 className="card-title">{feature.name}</h2>
+      <p>{feature.description}</p>
+    </div>
   </div>
 )
 

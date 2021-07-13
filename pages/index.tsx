@@ -31,6 +31,8 @@ type Props = {
   heroTitle: string
   heroSpeel: string
   cta: string
+  featuresTitle: string
+  featuresSubTitle: string
   features: Feature[]
   products: Product[]
   offers: Offer[]
@@ -50,6 +52,8 @@ const IndexPage = ({
   heroTitle,
   heroSpeel,
   cta,
+  featuresTitle,
+  featuresSubTitle,
   features,
   products,
   offers,
@@ -72,7 +76,11 @@ const IndexPage = ({
       speel={<span>{heroSpeel}</span>}
       cta={cta}
     />
-    <Features features={features} />
+    <Features
+      title={featuresTitle}
+      subTitle={featuresSubTitle}
+      features={features}
+    />
     <Products products={products} />
     <Offers offers={offers} />
     <Testimonials />

@@ -2,20 +2,17 @@ import { Feature } from '../../../interfaces/index'
 import FeatureCard from '../Cards/FeatureCard'
 
 type Props = {
+  title: string
+  subTitle: string
+  speel?: string
   features: Feature[]
 }
-const Features = ({ features }: Props) => (
+const Features = ({ title, subTitle, speel, features }: Props) => (
   <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 text-base-content">
     <div className="prose prose-xl text-center max-w-none">
-      <h2>Why Choose MCT Irish Tours?</h2>
-      <h3>Touring Ireland is second nature for us.</h3>
-      <p>
-        Our tour planning department will happily plan, book, and coordinate all
-        tour plans, from airport transfers to coach hire and tour guide booking,
-        hotel bookings, restaurant &amp; attractions, all your requirements in
-        one complete itinerary from your arrival in Ireland until your
-        departure.
-      </p>
+      <h2>{title}</h2>
+      <h3>{subTitle}</h3>
+      {speel && <p>{speel}</p>}
     </div>
     <div className="mt-10">
       <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">

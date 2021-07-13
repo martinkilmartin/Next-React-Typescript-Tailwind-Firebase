@@ -2,27 +2,51 @@ import { Feature } from '../interfaces/index'
 
 export const FEATURES: Feature[] = [
   {
-    name: 'Make every click count',
+    name: 'Change of Programme',
     description:
-      'Speed is an increasingly important ranking factor for Google Search and Ads',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat lacus, pretium in quam eget, dapibus porta sem. Suspendisse in erat interdum, venenatis urna id, elementum mi. Sed sapien risus, lacinia eu leo id, condimentum elementum neque. Duis consequat risus ac dui venenatis, vitae luctus orci fringilla. Pellentesque facilisis et sem ut fringilla. Pellentesque non dolor ut libero cursus consequat in et libero. Sed eu dignissim nisi. Morbi maximus feugiat mi, et efficitur nisi accumsan ullamcorper.',
     icon: '',
   },
   {
-    name: 'Increase conversions',
+    name: 'Change of Hotel',
     description:
-      'Walmart found that for every 1 second improvement in page load time, conversions increased by 2%.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat lacus, pretium in quam eget, dapibus porta sem. Suspendisse in erat interdum, venenatis urna id, elementum mi. Sed sapien risus, lacinia eu leo id, condimentum elementum neque. Duis consequat risus ac dui venenatis, vitae luctus orci fringilla. Pellentesque facilisis et sem ut fringilla. Pellentesque non dolor ut libero cursus consequat in et libero. Sed eu dignissim nisi. Morbi maximus feugiat mi, et efficitur nisi accumsan ullamcorper.',
     icon: '',
   },
   {
-    name: 'Full Web Accessibility',
+    name: 'Change of Dates',
     description:
-      'One billion people around the world utilize accessibility features to navigate the internet.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat lacus, pretium in quam eget, dapibus porta sem. Suspendisse in erat interdum, venenatis urna id, elementum mi. Sed sapien risus, lacinia eu leo id, condimentum elementum neque. Duis consequat risus ac dui venenatis, vitae luctus orci fringilla. Pellentesque facilisis et sem ut fringilla. Pellentesque non dolor ut libero cursus consequat in et libero. Sed eu dignissim nisi. Morbi maximus feugiat mi, et efficitur nisi accumsan ullamcorper.',
     icon: '',
   },
   {
-    name: 'Web Standards',
+    name: 'Change of Returns',
     description:
-      'Continuous integration  and continuous delivery means your website will always stay fast anf fresh.',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat lacus, pretium in quam eget, dapibus porta sem. Suspendisse in erat interdum, venenatis urna id, elementum mi. Sed sapien risus, lacinia eu leo id, condimentum elementum neque. Duis consequat risus ac dui venenatis, vitae luctus orci fringilla. Pellentesque facilisis et sem ut fringilla. Pellentesque non dolor ut libero cursus consequat in et libero. Sed eu dignissim nisi. Morbi maximus feugiat mi, et efficitur nisi accumsan ullamcorper.',
+    icon: '',
+  },
+  {
+    name: 'Ease of Access',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat lacus, pretium in quam eget, dapibus porta sem. Suspendisse in erat interdum, venenatis urna id, elementum mi. Sed sapien risus, lacinia eu leo id, condimentum elementum neque. Duis consequat risus ac dui venenatis, vitae luctus orci fringilla. Pellentesque facilisis et sem ut fringilla. Pellentesque non dolor ut libero cursus consequat in et libero. Sed eu dignissim nisi. Morbi maximus feugiat mi, et efficitur nisi accumsan ullamcorper.',
+    icon: '',
+  },
+  {
+    name: 'Promotion Code',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat lacus, pretium in quam eget, dapibus porta sem. Suspendisse in erat interdum, venenatis urna id, elementum mi. Sed sapien risus, lacinia eu leo id, condimentum elementum neque. Duis consequat risus ac dui venenatis, vitae luctus orci fringilla. Pellentesque facilisis et sem ut fringilla. Pellentesque non dolor ut libero cursus consequat in et libero. Sed eu dignissim nisi. Morbi maximus feugiat mi, et efficitur nisi accumsan ullamcorper.',
+    icon: '',
+  },
+  {
+    name: 'Ease of Booking',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat lacus, pretium in quam eget, dapibus porta sem. Suspendisse in erat interdum, venenatis urna id, elementum mi. Sed sapien risus, lacinia eu leo id, condimentum elementum neque. Duis consequat risus ac dui venenatis, vitae luctus orci fringilla. Pellentesque facilisis et sem ut fringilla. Pellentesque non dolor ut libero cursus consequat in et libero. Sed eu dignissim nisi. Morbi maximus feugiat mi, et efficitur nisi accumsan ullamcorper.',
+    icon: '',
+  },
+  {
+    name: 'Free Cancellation',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla erat lacus, pretium in quam eget, dapibus porta sem. Suspendisse in erat interdum, venenatis urna id, elementum mi. Sed sapien risus, lacinia eu leo id, condimentum elementum neque. Duis consequat risus ac dui venenatis, vitae luctus orci fringilla. Pellentesque facilisis et sem ut fringilla. Pellentesque non dolor ut libero cursus consequat in et libero. Sed eu dignissim nisi. Morbi maximus feugiat mi, et efficitur nisi accumsan ullamcorper.',
     icon: '',
   },
 ]

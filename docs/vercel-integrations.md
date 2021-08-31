@@ -30,6 +30,11 @@
 | **Low / Free Tier**    | US$0/M                      | US$25/M                           | US$0/M                                | US$0/M                                  | US$0/M                        | US$0/M                                     | US$0/M                                 |
 | **Mid Tier Pricing**   | US$1.25/M                   | US$150/M                          | US$120/M                              | US$60/M                                 | US$/M                         | :crystal_ball:                             | US$23/M                                |
 | **Upper Tier Pricing** | US$15/M                     | US$500/M                          | :telephone:                           | ?                                       | ?                             | :crystal_ball:                             | ?                                      |
+| **Free Read Ops**      | 100M                        | 100k                              | 300k (combined)                       | Unlimited                               |
+| **Free Write Ops**     | 10M                         | 50k                               | 300k (combined)                       | Unlimited                               |
+| **Free Compute Ops**   | N/A                         | 500k                              | N/A                                   | N/A                                     |
+| **Free Storage**       | 3 x 10Gb                    | 100Mb                             | 1GB                                   | 500Mb + 1Gb                             |
+| **Auth**               | N/A                         | N/A                               | N/A                                   | 10k Users                               |
 
 ## CMS
 
